@@ -1,0 +1,546 @@
+[
+ {
+  "model": "keyword-regex (baseline)",
+  "task": "route",
+  "n": 180,
+  "accuracy": 0.65,
+  "median_latency_s": 0,
+  "cost_per_decision_usd": 0,
+  "total_cost_usd": 0,
+  "unanswered": 0,
+  "answered": 180,
+  "calibration": {}
+ },
+ {
+  "model": "typesafe/jev-1.13",
+  "task": "route",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.8555555555555555,
+  "median_latency_s": 0.42449214548105374,
+  "cost_per_decision_usd": 1.8466466666666667e-05,
+  "total_cost_usd": 0.003323964,
+  "unanswered": 0,
+  "calibration": {
+   "0.0": {
+    "n": 4,
+    "accuracy": 0.5
+   },
+   "0.1": {
+    "n": 2,
+    "accuracy": 0.5
+   },
+   "0.2": {
+    "n": 4,
+    "accuracy": 0.5
+   },
+   "0.3": {
+    "n": 5,
+    "accuracy": 0.4
+   },
+   "0.5": {
+    "n": 4,
+    "accuracy": 0.5
+   },
+   "0.6": {
+    "n": 4,
+    "accuracy": 0.75
+   },
+   "0.7": {
+    "n": 4,
+    "accuracy": 0.75
+   },
+   "0.8": {
+    "n": 9,
+    "accuracy": 1.0
+   },
+   "0.9": {
+    "n": 50,
+    "accuracy": 0.86
+   },
+   "1.00": {
+    "n": 94,
+    "accuracy": 0.925531914893617
+   }
+  }
+ },
+ {
+  "model": "openai/gpt-5.6-terra",
+  "task": "route",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.8833333333333333,
+  "median_latency_s": 2.351483000005828,
+  "cost_per_decision_usd": 0.0007637000000000001,
+  "total_cost_usd": 0.137466,
+  "unanswered": 0,
+  "calibration": {
+   "0.5": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "0.6": {
+    "n": 6,
+    "accuracy": 0.6666666666666666
+   },
+   "0.7": {
+    "n": 29,
+    "accuracy": 0.8275862068965517
+   },
+   "0.8": {
+    "n": 11,
+    "accuracy": 0.6363636363636364
+   },
+   "0.9": {
+    "n": 133,
+    "accuracy": 0.924812030075188
+   }
+  }
+ },
+ {
+  "model": "anthropic/claude-opus-5",
+  "task": "route",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.9055555555555556,
+  "median_latency_s": 2.405343750011525,
+  "cost_per_decision_usd": 0.0022099444444444445,
+  "total_cost_usd": 0.39779,
+  "unanswered": 0,
+  "calibration": {
+   "0.5": {
+    "n": 4,
+    "accuracy": 0.5
+   },
+   "0.6": {
+    "n": 14,
+    "accuracy": 0.5
+   },
+   "0.7": {
+    "n": 24,
+    "accuracy": 0.8333333333333334
+   },
+   "0.8": {
+    "n": 28,
+    "accuracy": 0.9285714285714286
+   },
+   "0.9": {
+    "n": 110,
+    "accuracy": 0.9818181818181818
+   }
+  }
+ },
+ {
+  "model": "keyword-regex (baseline)",
+  "task": "triage",
+  "n": 148,
+  "accuracy": 0.40540540540540543,
+  "median_latency_s": 0,
+  "cost_per_decision_usd": 0,
+  "total_cost_usd": 0,
+  "unanswered": 0,
+  "answered": 148,
+  "calibration": {}
+ },
+ {
+  "model": "typesafe/jev-1.13",
+  "task": "triage",
+  "n": 148,
+  "answered": 148,
+  "accuracy": 0.7094594594594594,
+  "median_latency_s": 0.41064979149086867,
+  "cost_per_decision_usd": 1.900414864864865e-05,
+  "total_cost_usd": 0.002812614,
+  "unanswered": 0,
+  "calibration": {
+   "0.2": {
+    "n": 4,
+    "accuracy": 0.5
+   },
+   "0.3": {
+    "n": 3,
+    "accuracy": 0.0
+   },
+   "0.4": {
+    "n": 4,
+    "accuracy": 0.25
+   },
+   "0.5": {
+    "n": 6,
+    "accuracy": 0.5
+   },
+   "0.6": {
+    "n": 16,
+    "accuracy": 0.625
+   },
+   "0.7": {
+    "n": 10,
+    "accuracy": 0.9
+   },
+   "0.8": {
+    "n": 17,
+    "accuracy": 0.5294117647058824
+   },
+   "0.9": {
+    "n": 35,
+    "accuracy": 0.7428571428571429
+   },
+   "1.00": {
+    "n": 53,
+    "accuracy": 0.8490566037735849
+   }
+  }
+ },
+ {
+  "model": "openai/gpt-5.6-terra",
+  "task": "triage",
+  "n": 148,
+  "answered": 148,
+  "accuracy": 0.7297297297297297,
+  "median_latency_s": 2.171146188004059,
+  "cost_per_decision_usd": 0.0007450135135135135,
+  "total_cost_usd": 0.110262,
+  "unanswered": 0,
+  "calibration": {
+   "0.7": {
+    "n": 15,
+    "accuracy": 0.6
+   },
+   "0.8": {
+    "n": 21,
+    "accuracy": 0.6190476190476191
+   },
+   "0.9": {
+    "n": 112,
+    "accuracy": 0.7678571428571429
+   }
+  }
+ },
+ {
+  "model": "anthropic/claude-opus-5",
+  "task": "triage",
+  "n": 148,
+  "answered": 148,
+  "accuracy": 0.8040540540540541,
+  "median_latency_s": 2.860050292001688,
+  "cost_per_decision_usd": 0.0032535810810810813,
+  "total_cost_usd": 0.48153,
+  "unanswered": 0,
+  "calibration": {
+   "0.4": {
+    "n": 5,
+    "accuracy": 0.6
+   },
+   "0.5": {
+    "n": 9,
+    "accuracy": 0.4444444444444444
+   },
+   "0.6": {
+    "n": 13,
+    "accuracy": 0.7692307692307693
+   },
+   "0.7": {
+    "n": 33,
+    "accuracy": 0.7575757575757576
+   },
+   "0.8": {
+    "n": 27,
+    "accuracy": 0.8518518518518519
+   },
+   "0.9": {
+    "n": 61,
+    "accuracy": 0.8852459016393442
+   }
+  }
+ },
+ {
+  "model": "keyword-regex (baseline)",
+  "task": "score",
+  "n": 360,
+  "accuracy": 0.25277777777777777,
+  "median_latency_s": 0,
+  "cost_per_decision_usd": 0,
+  "total_cost_usd": 0,
+  "unanswered": 0,
+  "answered": 360,
+  "calibration": {}
+ },
+ {
+  "model": "typesafe/jev-1.13",
+  "task": "score",
+  "n": 360,
+  "answered": 359,
+  "accuracy": 0.37222222222222223,
+  "median_latency_s": 0.431672458013054,
+  "cost_per_decision_usd": 1.8035033333333333e-05,
+  "total_cost_usd": 0.006492612,
+  "unanswered": 1,
+  "calibration": {
+   "0.2": {
+    "n": 4,
+    "accuracy": 0.0
+   },
+   "0.3": {
+    "n": 11,
+    "accuracy": 0.2727272727272727
+   },
+   "0.4": {
+    "n": 17,
+    "accuracy": 0.17647058823529413
+   },
+   "0.5": {
+    "n": 60,
+    "accuracy": 0.3333333333333333
+   },
+   "0.6": {
+    "n": 70,
+    "accuracy": 0.3
+   },
+   "0.7": {
+    "n": 66,
+    "accuracy": 0.36363636363636365
+   },
+   "0.8": {
+    "n": 55,
+    "accuracy": 0.4727272727272727
+   },
+   "0.9": {
+    "n": 75,
+    "accuracy": 0.48
+   },
+   "1.00": {
+    "n": 1,
+    "accuracy": 1.0
+   }
+  }
+ },
+ {
+  "model": "openai/gpt-5.6-terra",
+  "task": "score",
+  "n": 360,
+  "answered": 360,
+  "accuracy": 0.4,
+  "median_latency_s": 3.562355228990782,
+  "cost_per_decision_usd": 0.0009346166666666666,
+  "total_cost_usd": 0.336462,
+  "unanswered": 0,
+  "calibration": {
+   "0.0": {
+    "n": 7,
+    "accuracy": 0.14285714285714285
+   },
+   "0.1": {
+    "n": 6,
+    "accuracy": 0.16666666666666666
+   },
+   "0.2": {
+    "n": 7,
+    "accuracy": 0.42857142857142855
+   },
+   "0.3": {
+    "n": 1,
+    "accuracy": 0.0
+   },
+   "0.4": {
+    "n": 4,
+    "accuracy": 0.25
+   },
+   "0.5": {
+    "n": 30,
+    "accuracy": 0.23333333333333334
+   },
+   "0.6": {
+    "n": 48,
+    "accuracy": 0.3125
+   },
+   "0.7": {
+    "n": 152,
+    "accuracy": 0.34868421052631576
+   },
+   "0.8": {
+    "n": 18,
+    "accuracy": 0.4444444444444444
+   },
+   "0.9": {
+    "n": 87,
+    "accuracy": 0.632183908045977
+   }
+  }
+ },
+ {
+  "model": "anthropic/claude-opus-5",
+  "task": "score",
+  "n": 360,
+  "answered": 359,
+  "accuracy": 0.4583333333333333,
+  "median_latency_s": 2.461874542001169,
+  "cost_per_decision_usd": 0.002873861111111111,
+  "total_cost_usd": 1.03459,
+  "unanswered": 1,
+  "calibration": {
+   "0.2": {
+    "n": 11,
+    "accuracy": 0.2727272727272727
+   },
+   "0.3": {
+    "n": 10,
+    "accuracy": 0.2
+   },
+   "0.4": {
+    "n": 38,
+    "accuracy": 0.23684210526315788
+   },
+   "0.5": {
+    "n": 105,
+    "accuracy": 0.34285714285714286
+   },
+   "0.6": {
+    "n": 89,
+    "accuracy": 0.5056179775280899
+   },
+   "0.7": {
+    "n": 67,
+    "accuracy": 0.5671641791044776
+   },
+   "0.8": {
+    "n": 26,
+    "accuracy": 0.7692307692307693
+   },
+   "0.9": {
+    "n": 13,
+    "accuracy": 0.9230769230769231
+   }
+  }
+ },
+ {
+  "model": "keyword-regex (baseline)",
+  "task": "gate",
+  "n": 180,
+  "accuracy": 0.6055555555555555,
+  "median_latency_s": 0,
+  "cost_per_decision_usd": 0,
+  "total_cost_usd": 0,
+  "unanswered": 0,
+  "answered": 180,
+  "calibration": {}
+ },
+ {
+  "model": "typesafe/jev-1.13",
+  "task": "gate",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.6388888888888888,
+  "median_latency_s": 0.42871164600364864,
+  "cost_per_decision_usd": 1.5702166666666667e-05,
+  "total_cost_usd": 0.00282639,
+  "unanswered": 0,
+  "calibration": {
+   "0.0": {
+    "n": 30,
+    "accuracy": 0.5
+   },
+   "0.1": {
+    "n": 31,
+    "accuracy": 0.5161290322580645
+   },
+   "0.2": {
+    "n": 25,
+    "accuracy": 0.76
+   },
+   "0.3": {
+    "n": 21,
+    "accuracy": 0.5714285714285714
+   },
+   "0.4": {
+    "n": 27,
+    "accuracy": 0.6666666666666666
+   },
+   "0.5": {
+    "n": 22,
+    "accuracy": 0.6818181818181818
+   },
+   "0.6": {
+    "n": 11,
+    "accuracy": 0.8181818181818182
+   },
+   "0.7": {
+    "n": 10,
+    "accuracy": 0.9
+   },
+   "0.8": {
+    "n": 3,
+    "accuracy": 0.6666666666666666
+   }
+  }
+ },
+ {
+  "model": "openai/gpt-5.6-terra",
+  "task": "gate",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.6611111111111111,
+  "median_latency_s": 2.973286353997537,
+  "cost_per_decision_usd": 0.0008248555555555555,
+  "total_cost_usd": 0.148474,
+  "unanswered": 0,
+  "calibration": {
+   "0.5": {
+    "n": 3,
+    "accuracy": 1.0
+   },
+   "0.6": {
+    "n": 1,
+    "accuracy": 1.0
+   },
+   "0.7": {
+    "n": 38,
+    "accuracy": 0.39473684210526316
+   },
+   "0.8": {
+    "n": 43,
+    "accuracy": 0.627906976744186
+   },
+   "0.9": {
+    "n": 95,
+    "accuracy": 0.7684210526315789
+   }
+  }
+ },
+ {
+  "model": "anthropic/claude-opus-5",
+  "task": "gate",
+  "n": 180,
+  "answered": 180,
+  "accuracy": 0.8,
+  "median_latency_s": 5.055071145485272,
+  "cost_per_decision_usd": 0.003805888888888889,
+  "total_cost_usd": 0.68506,
+  "unanswered": 0,
+  "calibration": {
+   "0.3": {
+    "n": 3,
+    "accuracy": 1.0
+   },
+   "0.5": {
+    "n": 2,
+    "accuracy": 1.0
+   },
+   "0.6": {
+    "n": 27,
+    "accuracy": 0.6296296296296297
+   },
+   "0.7": {
+    "n": 68,
+    "accuracy": 0.7352941176470589
+   },
+   "0.8": {
+    "n": 54,
+    "accuracy": 0.8703703703703703
+   },
+   "0.9": {
+    "n": 26,
+    "accuracy": 0.9615384615384616
+   }
+  }
+ }
+]
