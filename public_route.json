@@ -1,0 +1,902 @@
+[
+ {
+  "id": "4600bb33",
+  "label": "frontend",
+  "text": "Adjust Ask AI tracking events & pass NDV session id (no-changelog) . Github issue / Community forum post (link here to close automatically): ---------"
+ },
+ {
+  "id": "832d0877",
+  "label": "frontend",
+  "text": "Fix formatting on editors (no-changelog) . Prettier 3 has a [new package structure](<url> made `format` async, and requires `estree` in specific cases. e2e run: <url>"
+ },
+ {
+  "id": "847f6ac7",
+  "label": "backend",
+  "text": "Prevent error messages due to statistics about data loading . Statistics collection about the first time a workflow loads data simply attempts an insert to db, and if it fails, we just ignore. This was causing this query to fire against production workflows multiple times, and since we want to insert only and detect whether the insertion failed, performing a select first provides gains both in terms of performance, as it's usually faster than trying an insertion as well as preventing unnecessary noise in logs. Github issue / Community forum post (link here to close automatically): <url> <url> <url> <url> <url> ---------"
+ },
+ {
+  "id": "990068ff",
+  "label": "frontend",
+  "text": "Replace native Array.prototype.findLast with lodash.findLast (no-changelog) . fix(editor): Replace native Array.findLast with lodash.findLast"
+ },
+ {
+  "id": "0a745d16",
+  "label": "frontend",
+  "text": "Add missing workflow id from route (no-changelog) . ## Summary #### How to test the change: 1. Go to executions page for a workflow without executions 2. Wait for autoRefresh to start 3. Error appears in console due to missing `name` parameter ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "596cf07e",
+  "label": "frontend",
+  "text": "Replace all <term>.set usages with direct assignment and spread operator (no-changelog) . * refactor: replace all <term>.set usages with direct assignment and spread operator * chore: fix linting issue * fix: fix updateNodeAtIndex function * fix: various post-refactoring fixes * fix: refactor recently added <term>.set directive"
+ },
+ {
+  "id": "df113823",
+  "label": "frontend",
+  "text": "Use `color-mix()` for subtle button <path> states and update guideline (no-changelog) . Co-authored-by: Sebastien Powell <sebpowell@users.noreply.github.com>"
+ },
+ {
+  "id": "d4483795",
+  "label": "backend",
+  "text": "Persist AI Assistant domain-access approvals across restarts and mains . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1020742d",
+  "label": "backend",
+  "text": "Migrate the executions tags endpoints to the decorator pattern (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "0ddafd2b",
+  "label": "backend",
+  "text": "Unify users.controller.test and users.api.test (no-changelog) . Groundwork to be able to safely refactor and move the invitation logic to the UserService. ---------"
+ },
+ {
+  "id": "90a3f460",
+  "label": "frontend",
+  "text": "Support showing full label in tooltip on hover of dropdown menu items (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "e928210c",
+  "label": "frontend",
+  "text": "Prevent browser zoom when scrolling inside sticky edit mode . ## Summary browser zoom. Instead, triggers regular canvas zoom. ## Related tickets and issues ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. > A feature is not complete without tests."
+ },
+ {
+  "id": "dce55d2e",
+  "label": "backend",
+  "text": "Add search_projects, search_folders MCP tools and folderId to create_workflow . Co-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "90176902",
+  "label": "backend",
+  "text": "Extract the repeated resource-URL to webhook-path preamble in the oauth-<term> resolvers . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "227050b9",
+  "label": "frontend",
+  "text": "Remove execution-state compatibility shims from workflows store (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "ab74bade",
+  "label": "frontend",
+  "text": "Add node execution status indicator to output panel . ## Summary Adding node execution status indicator to the output panel ([Figma HiFi](<url> ## Related tickets and issues ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. > A feature is not complete without tests."
+ },
+ {
+  "id": "ece6d303",
+  "label": "backend",
+  "text": "Move createDeferredPromise into @<path> (no-changelog) . Co-authored-by: linear-code[bot] <222613912+linear-code[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "bc1c72f9",
+  "label": "frontend",
+  "text": "Allow SSH protocol in git repository URL for environments . ## Summary Allow SSH protocol in git repository URL for environments ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "968b733f",
+  "label": "backend",
+  "text": "Add support for <file> 18 . * ci: Start supporting <file> 18 <file> 18 became the active LTS on 2022-10-25, and <file> 16 went into maintenance mode. <url> We should also slowly deprecate node 16 support, [as support for it is ends much earlier now, due to support for openssl 1.1.1 ending](<url> * Remove hashing algorithms that are not available in newer <path> - RSA-MD4 - RSA-MDC2 - md4 - md4WithRSAEncryption - mdc2 - mdc2WithRSA * in e2e tests, resolve `localhost` to ipv4 instead of ipv6"
+ },
+ {
+  "id": "d917dfe9",
+  "label": "frontend",
+  "text": "Remove tracking for SAML test success (no-changelog) . Follow-up to: <url> It turns out that SAML test success cannot be tracked on the FE. We might track on the BE, but after further discussion with Product, we do not really need to track this property, so this PR simply removes it."
+ },
+ {
+  "id": "675ec21d",
+  "label": "frontend",
+  "text": "Data transformation nodes and actions in Nodes Panel . - Split Items List node into separate nodes per action - Review node descriptions - New icons - New sections in subcategories ---------"
+ },
+ {
+  "id": "3a881be6",
+  "label": "backend",
+  "text": "Unify application components shutdown . ## Summary Add `ShutdownService` and `OnShutdown` decorator for more unified way to shutdown different components. Use this new way in the following components: - HTTP(S) <term> - Pruning service - Push connection - License ---------"
+ },
+ {
+  "id": "63bd9af1",
+  "label": "frontend",
+  "text": "Add new empty state with quick connect for node credentials . Co-authored-by: Dimitri Lavren\u00fck <20122620+dlavrenuek@users.noreply.github.com>"
+ },
+ {
+  "id": "34b5898b",
+  "label": "backend",
+  "text": "Add PolicyCleared capability token and PolicyViolationError (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3fa6adb6",
+  "label": "backend",
+  "text": "Add real-filesystem regression test for community-package scan . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "ecce3504",
+  "label": "backend",
+  "text": "Reclassify expected <term> errors out of the Sentry error stream . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "9dc491c3",
+  "label": "backend",
+  "text": "Improve test-webhooks (no-changelog) . Remove duplication, improve readability, and expand tests for `<file>` - in anticipation for storing test webhooks in Redis. ---------"
+ },
+ {
+  "id": "f5a8ac26",
+  "label": "backend",
+  "text": "Share the Slack setup constants and the managed-app cache key between the two Slack setup services . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "b5cabfef",
+  "label": "frontend",
+  "text": "Improve executions list polling performance . * refactor: move auto-refresh logic to executions list * fix: improve auto-refresh polling * fix: update executions list view to use same interval mechanism as executions sidebar * chore: fix linting issue * fix: fix executions list test * fix: fix linting issue"
+ },
+ {
+  "id": "2cfa6d34",
+  "label": "backend",
+  "text": "Consolidate `WorkflowService.getMany()` (no-changelog) . In scope: - Consolidate `WorkflowService.getMany()`. - Support non-entity field `ownedBy` for `select`. - Support `tags` for `filter`. - Move `addOwnerId` to `OwnershipService`. - Remove unneeded check for `filter.id`. - Simplify DTO validation for `filter` and `select`. - Expand tests for `GET /workflows`. Workflow list query DTOs: ``` filter \u2192 name, active, tags select \u2192 id, name, active, tags, createdAt, updatedAt, versionId, ownedBy ``` Out of scope: - Migrate `shared_workflow.roleId` and `shared_credential.roleId` to string IDs. - Refactor `WorkflowHelpers.getSharedWorkflowIds()`."
+ },
+ {
+  "id": "92fa6233",
+  "label": "frontend",
+  "text": "Run dev command only for core packages (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. - Filters out `@<path>` and `n8n-<term>` from `pnpm run dev` - Fixes <path> error appearing due to code string `import ... from '@<path>'` #### How to test the change: 1. `pnpm run dev` should work as expected 2. The command should not run for the two packages above 3. The error regarding `@<path>` should no longer appear ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. <path> > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)*"
+ },
+ {
+  "id": "008fd5a9",
+  "label": "frontend",
+  "text": "Add e2e tests for cred setup on workflow editor (no-changelog) . ## Summary Follow-up to <url> Adds e2e tests for the template credential setup in workflow editor ## Related tickets and issues <url>"
+ },
+ {
+  "id": "329d22f5",
+  "label": "backend",
+  "text": "Reduce memory consumption on `BinaryDataManager.init` . fix(core): Reduce memory consumption on BinaryDataManager.init When there are a few thousand binary data file to delete, the `deleteMarkedFiles` and `deleteMarkedPersistedFiles` methods need a lot of memory to process these files, irrespective of if these files have any data or not."
+ },
+ {
+  "id": "dc2ba743",
+  "label": "backend",
+  "text": "Use mixins to delete redundant code between Entity classes (no-changelog) . * db entities don't need an ID before they are inserted * don't define constructors on entity classes, use repository.create instead * use mixins to reduce duplicate code in db entity classes"
+ },
+ {
+  "id": "e01b9e5a",
+  "label": "backend",
+  "text": "Prevent false stalled jobs in queue mode from displaying as errored . This is related to an issue with how Bull handles stalled jobs, see <url> for reference. CPU intensive workflows can in certain cases take a long while to finish up, thereby blocking the thread and causing Bull queue to think the job has stalled, even though it finished successfully. In these cases the error handling could then overwrite the successful execution data with the error message."
+ },
+ {
+  "id": "2854a0cf",
+  "label": "frontend",
+  "text": "Allow overriding theme from query params . Allow overriding theme through query params.. to be able to override it from preview iframe in webcomponent Github issue / Community forum post (link here to close automatically):"
+ },
+ {
+  "id": "c857e426",
+  "label": "backend",
+  "text": "Coordinate workflow activation in multiple main scenario in internal API . Story: <url> This PR coordinates workflow activation on instance startup and on leadership change in multiple main scenario in the internal API. Part 3 on manual workflow activation and deactivation will be a separate PR. ### Part 1: Instance startup In multi-main scenario, on starting an instance... - [x] If the instance is the leader, it should add webhooks, triggers and pollers. - [x] If the instance is the follower, it should not add webhooks, triggers or pollers. - [x] Unit tests. ### Part 2: Leadership change In multi-main scenario, if the main instance leader dies\u2026 - [x] The new main instance leader must activate all trigger- and poller-based workflows, excluding webhook-based workflows. - [x] The old main instance leader must deactivate all trigger- and poller-based workflows, excluding webhook-based workflows. - [x] Unit tests. To test, start two instances and check behavior on startup and leadership change: ``` EXECUTIONS_MODE=queue N8N_LEADER_SELECTION_ENABLED=true N8N_LICENSE_TENANT_ID=... N8N_LICE"
+ },
+ {
+  "id": "184ed8e1",
+  "label": "frontend",
+  "text": "Migrate `genericHelpers` mixin to composable . ## Summary - Moved out canvas loading handling to canvas store - Tag editable routes via meta to remove router dependency from generic helpers - Replace all occurrences of `genericHelpers` mixin with composable and audit usage - Moved out `isRedirectSafe` and `getRedirectQueryParameter` out of genericHelpers to remove dependency on router Removing the router dependency is important, because `useRouter` and `useRoute` compostables are only available if called from <term> instance. So if composable is nested within another composable, we wouldn't be able to use these. In this case we'd always need to inject the router and pass it through several composables. That's why I moved the `readonly` logic to router meta and `isRedirectSafe` and `getRedirectQueryParameter` out as they were only used in a single <term>. ---------"
+ },
+ {
+  "id": "cfbc99e1",
+  "label": "frontend",
+  "text": "Remove duplicated action box to upgrade on UsersSettngsView (no-changelog) . fix(editor): Remove duplicated action box to upgrade on UsersSettngsView"
+ },
+ {
+  "id": "cc92e15a",
+  "label": "backend",
+  "text": "Replace hand-rolled unique-constraint checks in <path> with the shared `isUniqueConstraintError` from `@<path>` . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "785bf997",
+  "label": "backend",
+  "text": "Use relative imports for dynamic imports in SecurityAuditService . `tsc-alias` doesn't seem to replace imports when using template strings ## Related tickets and issues #8085 ## Review / Merge checklist - [x] PR title and summary are descriptive."
+ },
+ {
+  "id": "050ba706",
+  "label": "backend",
+  "text": "Attempt license renewal when n8n starts (no-changelog) . This change is needed so that the newly introduced floating licenses will be attempted to be claimed when n8n starts up."
+ },
+ {
+  "id": "80a20933",
+  "label": "backend",
+  "text": "Collect and aggregate metrics from the evaluation workflow execution (no-changelog) . Co-authored-by: Tomi Turtiainen <10324676+tomi@users.noreply.github.com>"
+ },
+ {
+  "id": "8b993843",
+  "label": "frontend",
+  "text": "Fix cloud plan data loading on instance . Moving cloud hooks and store initialization logic after users are authenticated. This will ensure user local account is available when their cloud plan data is being fetched. This PR also adds the following error handling improvements: - Added error handling to the same initialization logic - Fixed empty `catch` clauses inside the cloud store which caused it to silently fail and complicated debugging of this bug"
+ },
+ {
+  "id": "0d209bfc",
+  "label": "frontend",
+  "text": "Track canvas re-render counts in performance benchmarks (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "dff84563",
+  "label": "backend",
+  "text": "Reorganize error hierarchy in `core` and `workflow` packages (no-changelog) . Ensure all errors in `core` and `workflow` inherit from `ApplicationError` so that we start normalizing all the errors we report to Sentry Follow-up to: <url> ### `core` package `ApplicationError` - `FileSystemError` (abstract) - `FileNotFoundError` - `DisallowedFilepathError` - `BinaryDataError` (abstract) - `InvalidModeError` - `InvalidManagerError` - `InvalidExecutionMetadataError` ### `workflow` package `ApplicationError` - `ExecutionBaseError` (abstract) - `WorkflowActivationError` - `WorkflowDeactivationError` - `WebhookTakenError` - `WorkflowOperationError` - `SubworkflowOperationError` - `CliWorkflowOperationError` - `ExpressionError` - `ExpressionExtensionError` - `NodeError` (abstract) - `NodeOperationError` - `NodeApiError` - `NodeSSLError` Up next: - Reorganize errors in `<term>` - Flatten the hierarchy in `workflow` (do we really need `ExecutionBaseError`?) - Remove `ExecutionError` type - Stop throwing plain `Error`s - Replace `severity` with `level` - Add node and credential types as `tags` -"
+ },
+ {
+  "id": "2328b658",
+  "label": "frontend",
+  "text": "Extend `workflowExecutionState` with active-execution accessors (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "ec8ed892",
+  "label": "frontend",
+  "text": "Propagate last successful execution to expression edit modal . Co-authored-by: Shireen Missi <94372015+ShireenMissi@users.noreply.github.com>"
+ },
+ {
+  "id": "6ae2f5ef",
+  "label": "backend",
+  "text": "Fix shutdown if terminating before hooks are initialized . If the app receives termination signal before hooks have been initialised, the would be objet is undefined error. This PR fixes that."
+ },
+ {
+  "id": "37bb354b",
+  "label": "backend",
+  "text": "Advertise OAuth protected-resource metadata URL on MCP <term> 401 responses . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1107974b",
+  "label": "frontend",
+  "text": "Allow dragging a node group from the title bar next to its name (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "0511458d",
+  "label": "backend",
+  "text": "Cache webhooks . * refactor: Initial setup * Refactor for clarity * Comments to clarify * More replacements * Simplify with `fullPath` * Fix tests * Implement remaining methods * chore: Fix misresolved conflicts * Simplify syntax * Reduce diff * Minor cleanup * Fix lint * Inject dependency * Improve typings * Remove unused method * Restore method * Add comment * Rename in test * Restore comments * Clean up dynamic webhook handling * Clean up tests * Remove redundant `cache` prefix * fix: Correct `uniquePath` for dynamic webhooks"
+ },
+ {
+  "id": "e9c7fd73",
+  "label": "frontend",
+  "text": "Show public API upgrade CTA when feature is not enabled . ## Summary > Describe what the PR does and how to test. Photos and videos are recommended. Shows the public API upgrade CTA when the feature is not enabled. Now trialing users in cloud would see the API on the settings menu and can upgrade from there. When public API feature disabled: <img width=\"1863\" alt=\"image\" src=\"<url> When public API feature enabled with no API key: <img width=\"1861\" alt=\"image\" src=\"<url> When public API feature enabled with API key: <img width=\"1423\" alt=\"image\" src=\"<url> ## Related tickets and issues [> Include links to **Linear ticket** or Github issue or Community forum post. Important in order to close *automatically* and provide context to r](<url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. > A feature is not complete without tests."
+ },
+ {
+  "id": "38b88b94",
+  "label": "backend",
+  "text": "Consolidate ownership and sharing data on workflows and credentials . ## Summary Ensure `ownedBy` and `sharedWith` are present and uniform for credentials and workflows. Details in story: <url>"
+ },
+ {
+  "id": "bcfc5e71",
+  "label": "backend",
+  "text": "Move webhook DB access to repository (no-changelog) . * refactor(core): Move webhook DB access to repository (no-changelog) * make sure `DataSource` is initialized before it's dependencies at some point I hope to replace `DataSource` with a custom `DatabaseConnection` service class that can then disconnect and reconnect from DB without having to update all repositories. ---------"
+ },
+ {
+  "id": "b66d1510",
+  "label": "frontend",
+  "text": "Remove triggers and actions experiment (no-changelog) . * refactor: Remove triggers and actions experiment * fix: Use `value` for computed property * test: Fix e2e"
+ },
+ {
+  "id": "79f529c1",
+  "label": "backend",
+  "text": "Bug with incorrect DI in some cases - picked up by enabling linting rule . Signed-off-by: James Gee <1285296+geemanjs@users.noreply.github.com>"
+ },
+ {
+  "id": "29e7a98f",
+  "label": "backend",
+  "text": "Use license mocker in RBAC tests (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "d6d0effd",
+  "label": "backend",
+  "text": "Override workflow redaction policy at execution time when instance enforcement is on . Co-authored-by: Yuliia Pominchuk <yuliia.pominchuk@n8n.io>"
+ },
+ {
+  "id": "9ac7c5b0",
+  "label": "backend",
+  "text": "Add telemetry for data redaction enforcement instance policy (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3ea606ac",
+  "label": "backend",
+  "text": "Resolve test-config module aliases dynamically instead of hardcoding versions (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3d6f5a24",
+  "label": "frontend",
+  "text": "Add canvas actions E2E tests . * test(editor): Add canvas actions E2E tests (#6723) * test(editor): Add canvas actions E2E tests * test(editor): Open category items in node creator when category dropped on canvas * test(editor): Have new position counted only once in drag * test(editor): rename test (cherry picked from commit 052d82b2208c1b2e6f62c6004822c6278c15278b) * test: fix drag positioning"
+ },
+ {
+  "id": "d0e44d45",
+  "label": "backend",
+  "text": "Add multi-main setup debug <term> (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. Adi's idea here to help diagnose: <url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "afbf0c3d",
+  "label": "frontend",
+  "text": "Use display option's @Version specifier . Nodes can have properties that have a displayOption which specifies a version for which node versions that property applies to. We should take this into account when forming the action types for a Node in the NodeList. For example Notion node has 2 version which have different Page operations."
+ },
+ {
+  "id": "5819be5c",
+  "label": "frontend",
+  "text": "Show confirm on pull only when http response status is 409 . * fix(editor): add docs link to translation * fix(editor): show confirm on pull only when http response status is 409"
+ },
+ {
+  "id": "cbf24768",
+  "label": "backend",
+  "text": "Find correct start nodes when the first node after that has no run data has pinned data . Co-authored-by: \u0915\u093e\u0930\u0924\u094b\u092b\u094d\u092b\u0947\u0932\u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u2122 <netroy@users.noreply.github.com>"
+ },
+ {
+  "id": "b0e98b59",
+  "label": "frontend",
+  "text": "Rework banners framework and add email confirmation banner . This PR introduces banner framework overhaul: First version of the banner framework was built to allow multiple banners to be shown at the same time. Since that proven to be the case we don't need and it turned out to be pretty messy keeping only one banner visible in such setup, this PR reworks it so it renders only one banner at a time, based on [this priority list](<url> that is assembled together with our product & design team. ### How to test banner stack: 1. Available banners and their priorities are registered [here](<url> 2. Banners are pushed to stack using `pushBannerToStack` action, for example: ``` useUIStore().pushBannerToStack('TRIAL'); ``` 4. Try pushing different banners to stack and check if only the one with highest priorities is showing up ### How to test the _Email confirmation_ banner: 1. Comment out [this line](<url> so cloud data is always fetched 2. Create an [override](<url> (URL -> File) that will serve user data that triggers this banner: - **URL**: `*/<path>` - **File**: ``` { \"confirmed\": false,"
+ },
+ {
+  "id": "b453d12a",
+  "label": "backend",
+  "text": "Preserve credential displayOptions in node description adapter (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "92d4befe",
+  "label": "backend",
+  "text": "Fix AddMfaColumns <term> for sqlite (no-changelog) . When ever we have migrations that use `.addColumn` or `.dropColumn`, typeorm recreates tables for sqlite. so, we need to disable foreign key enforcement for sqlite, or else data in some tables can get deleted because of `ON DELETE CASCADE` [This has happened in the past](<url> and we should really come up with a way to prevent this from happening again. ---------"
+ },
+ {
+  "id": "41236b7e",
+  "label": "backend",
+  "text": "Save new version of the workflow instead of the previous (no-changelog) . Github issue / Community forum post (link here to close automatically):"
+ },
+ {
+  "id": "052d82b2",
+  "label": "frontend",
+  "text": "Add canvas actions E2E tests . * test(editor): Add canvas actions E2E tests * test(editor): Open category items in node creator when category dropped on canvas * test(editor): Have new position counted only once in drag * test(editor): rename test"
+ },
+ {
+  "id": "a4578d68",
+  "label": "backend",
+  "text": "Create workflow history <term> <term> (no-changelog) . Github issue / Community forum post (link here to close automatically): For the upcoming workflow history feature, we're creating the necessary <term> tables. Also changes the schema for Postgres so the versionId column is now properly a UUID. The `using` statement prevents losing data, basically converting the strings to UUIDs. ---------"
+ },
+ {
+  "id": "8a78ae17",
+  "label": "frontend",
+  "text": "Add template id to workflows created from templates (no-changelog) . In #8088 template ID was added to workflow metadata, but it was missing from workflows that were created using the template credential setup. This fixes that."
+ },
+ {
+  "id": "15749aa3",
+  "label": "frontend",
+  "text": "Resolve workflow push handlers by id and remove workflow state store and composable (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "0824800d",
+  "label": "frontend",
+  "text": "Fix issue that double incoming connection often does not resolve expression (no-changelog) . Cherry-picked from AI Tool Creation branch ---------"
+ },
+ {
+  "id": "b780436a",
+  "label": "frontend",
+  "text": "Improve canvas rendering performance . ## Summary - Refactor usage of `setSuspendDrawing`, removing it from loops and only calling it after batch operations are done - Batch adding of nodes to improve <path> and workflow load performance - Cache i18n calls - Debounce connections dragging handler if there are more than 20 nodes ## Related tickets and issues > Include links to **Linear ticket** or Github issue or Community forum post. Important in order to close *automatically* and provide context to reviewers. - <url> ---------"
+ },
+ {
+  "id": "0ac95946",
+  "label": "backend",
+  "text": "Fix issue preventing secrets from loading if the path contains - or / . ## Summary KV stores if the secret path contained a `-` or a `/`, An example provided was `<path>` which I have tested in my local instance of Vault. This still needs testing with Infisical to make sure nothing breaks there."
+ },
+ {
+  "id": "0f2bc6b7",
+  "label": "frontend",
+  "text": "Fix an issue with connections breaking during renaming . * fix(editor): Fix an issue where dragging during when rename modal active would break workflow connections * Use enum to check for confirm state of modal"
+ },
+ {
+  "id": "148bc1d3",
+  "label": "frontend",
+  "text": "Add missing string for worker in log streaming . ## Summary Add missing string for worker in log streaming Before: <url> After: <url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "7e674c11",
+  "label": "frontend",
+  "text": "Rework evaluations wizard into four steps (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "08ee3072",
+  "label": "frontend",
+  "text": "Show template credential setup based on feature flag . Replace the local storage based feature flag with posthog feature flag. Also: - Fix bunch of eslint warnings in posthog store"
+ },
+ {
+  "id": "7a86d360",
+  "label": "backend",
+  "text": "Allow user role modification . <url> ``` PATCH /users/:<path> unauthenticated user \u2713 should receive 401 (349 ms) member \u2713 should fail to demote owner to member (349 ms) \u2713 should fail to demote owner to admin (359 ms) \u2713 should fail to demote admin to member (381 ms) \u2713 should fail to promote other member to owner (353 ms) \u2713 should fail to promote other member to admin (377 ms) \u2713 should fail to promote self to admin (354 ms) \u2713 should fail to promote self to owner (371 ms) admin \u2713 should receive 400 on invalid payload (351 ms) \u2713 should receive 404 on unknown target user (351 ms) \u2713 should fail to demote owner to admin (349 ms) \u2713 should fail to demote owner to member (347 ms) \u2713 should fail to promote member to owner (384 ms) \u2713 should fail to promote admin to owner (350 ms) \u2713 should be able to demote admin to member (354 ms) \u2713 should be able to demote self to member (350 ms) \u2713 should be able to promote member to admin (349 ms) owner \u2713 should be able to promote member to admin (349 ms) \u2713 should be able to demote admin to member (349 ms) \u2713 should fail to demote self to admin (348 ms) \u2713 should"
+ },
+ {
+  "id": "3a015505",
+  "label": "frontend",
+  "text": "De-duplicate <term> devDependencies (no-changelog) . `@<path>` was pulling in a lot of duplicate dependencies. This PR updates all <term> packages to use an many of the same versions of <term> devDependencies as possible. ## Review / Merge checklist - [x] PR title and summary are descriptive"
+ },
+ {
+  "id": "91333400",
+  "label": "frontend",
+  "text": "AI Agent shows logs from multiple runs in same view . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "8c38d85e",
+  "label": "backend",
+  "text": "Fix `import:workflow` command . Ref: <url> To test: ```sh ./<path> export:workflow --all --output=./<file> ./<path> import:workflow --input=./<file> ```"
+ },
+ {
+  "id": "511e34fd",
+  "label": "backend",
+  "text": "Preserve and author workflow node groups across update surfaces (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "6e9fa110",
+  "label": "backend",
+  "text": "Extract InstanceAiTerminalOutcomeService for terminal-response guarding and background outcome delivery . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "4cae976a",
+  "label": "backend",
+  "text": "Consider timeout in shutdown an error . If the process doesn't shutdown within a time limit, exit with error code. 1. conceptually something timing out is an error. 2. on successful exit we close down the DB connection gracefully. On an exit timeout we rather not do that, since it will wait for any active connections to close and would possible block the exit."
+ },
+ {
+  "id": "ffae8edc",
+  "label": "backend",
+  "text": "Cache workflow ownership . * refactor: Set up ownership service * refactor: Specify cache keys and values * refactor: Replace util with service calls * test: Mock service in tests * refactor: Use dependency injection * test: Write tests * refactor: Apply feedback from Omar and Micha * test: Fix tests * test: Fix missing spot * refactor: Return user entity from cache * refactor: More dependency injection!"
+ },
+ {
+  "id": "5b149495",
+  "label": "backend",
+  "text": "Grade token consumption and memory compaction in Instance AI evals (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "627ddb91",
+  "label": "frontend",
+  "text": "Open template credential setup from collection . Open the template credential setup when using a template from the collection view. NOTE! This feature is still behind a feature flag. To test, set: ```js localStorage.setItem('template-credentials-setup', 'true') ``` <url>"
+ },
+ {
+  "id": "618b1aba",
+  "label": "frontend",
+  "text": "Replace <term>.delete with native alternative (no-changelog) . * feat: replace <term>.delete with native alternative (no-changelog) * fix: fix linting issues"
+ },
+ {
+  "id": "c5e6ba8c",
+  "label": "backend",
+  "text": "Restore workflow ID during execution creation . ## Summary Restore workflow ID during execution creation removed by [this PR](<url> The missing workflow ID, and more generally the fact that `workflow.id` is optional when it should not be, causes `PermissionChecker.check` to misreport a credential as inaccessible when it should be accessible. More generally, start reporting ID-less workflows so we can root them out and prevent this at type level. ## Related tickets and issues <url>"
+ },
+ {
+  "id": "39fa8d21",
+  "label": "frontend",
+  "text": "Add sections to create node panel . This PR sets the stage for the node creator to handle sections within subcategories. No visible changes result from this PR; the next PR will define sections and assign nodes accordingly. Sections are configurable in `<path>`: ``` { type: 'subcategory', key: FILES_SUBCATEGORY, category: CORE_NODES_CATEGORY, properties: { title: FILES_SUBCATEGORY, icon: 'file-alt', sections: [ { key: 'popular', title: i18n.baseText('nodeCreator.sectionNames.popular'), items: ['n8n-nodes-base.readBinaryFiles', 'n8n-nodes-base.compression'], }, ], }, }, ``` For example: <img width=\"302\" alt=\"image\" src=\"<url> ---------"
+ },
+ {
+  "id": "bbeeab5d",
+  "label": "backend",
+  "text": "Add project reference for `@<path>` (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. The missing [project seems to be preventing the package from being picked up. <img width=\"1022\" alt=\"Capture 2023-12-11 at 13 49 55@2x\" src=\"<url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "1af04ddf",
+  "label": "frontend",
+  "text": "Read node types from the local SQLite <term> when enabled (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1197811a",
+  "label": "backend",
+  "text": "Allow syntax errors and expression errors to fail executions . * fix: Unify expression error behavior for v1 * fix: Add `<file>` to `tsconfig.<file>` * fix: Make `isFrontend` a constant * fix: Use CommonJS require to read version * fix: Use `JSON.parse()` and `fs.readFileSync()` * feat(editor): Make WF name a link on /executions (#6354) * make wf name a link in exec view * link color * make wf name a link in exec view * link color --------- * fix: Try restoring inclusions in tsconfig files * fix: Try with copy * refactor: Switch base branch and remove global toggle * chore: Remove unrelated changes * chore: Restore lockfile * fix: Ensure all expression errors fail executions * uncaught ExpressionErrors should not fail e2e tests ---------"
+ },
+ {
+  "id": "b16dd219",
+  "label": "backend",
+  "text": "Switch plain errors in `core` to `ApplicationError` (no-changelog) . Ensure all errors in `core` are `ApplicationError` or children of it and contain no variables in the message, to continue normalizing all the errors we report to Sentry Follow-up to: <url>"
+ },
+ {
+  "id": "bbe49389",
+  "label": "frontend",
+  "text": "Remove <term>.<term> usage and refactor plugins into <term> Plugins (no-changelog) . * fix: remove <term>.<term> usage and refactor plugins into <term> Plugins system (no-changelog) * fix linting issues ---------"
+ },
+ {
+  "id": "a79aa198",
+  "label": "frontend",
+  "text": "Prevent RMC from loading schema if it's already cached . * fix(editor): Prevent RMC from loading schema if it's already cached * \u2705 Adding new tests for RMC * \ud83d\udc55 Fixing lint errors * \ud83d\udc4c Updating inline loader styling"
+ },
+ {
+  "id": "e8dd6098",
+  "label": "backend",
+  "text": "Gate Instance AI config-based evals behind a PostHog feature flag (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "d8f22e5e",
+  "label": "frontend",
+  "text": "Limit run live demo ready-to-run button to users created within 14 days . Co-authored-by: Romeo Balta <7095569+romeobalta@users.noreply.github.com>"
+ },
+ {
+  "id": "7635131b",
+  "label": "frontend",
+  "text": "Show locked state and permission notice on data redaction workflow settings . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "647372be",
+  "label": "backend",
+  "text": "Add support for oauth based service accounts with UM SMTP . This PR adds support for using OAuth based service accounts for the User Management SMTP connection. Tested using a Google Service Account."
+ },
+ {
+  "id": "2da15d02",
+  "label": "backend",
+  "text": "Remove ID-less workflow reporting (no-changelog) . We added ID-less workflow reporting at #8031, which has already produced multiple reports coming from internal, enough info to tackle [this story](<url> To prevent an overwhelming number of reports from cloud, this PR removes the reporting for now."
+ },
+ {
+  "id": "9e39914c",
+  "label": "backend",
+  "text": "Wire <path> through janitor + fix global-trigger scope gap (DEVP-195) . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "1b87f4f0",
+  "label": "backend",
+  "text": "Use `sleep` from `@<path>` instead of inline setTimeout promises in <path> . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "b6c1c04b",
+  "label": "backend",
+  "text": "Add config option for external secret update interval . ## Summary Adds `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` to allow enterprise users to tweak the update internal for importing new secrets. If using a config file the value is: ``` \"externalSecrets\": { \"updateInterval\": 300 } ``` #### How to test the change: 1. Run as normal and check that the secret is updated every 5 minutes 2. Set `N8N_EXTERNAL_SECRETS_UPDATE_INTERVAL` to 10 3. Check the secret is reloaded after 10 seconds ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created."
+ },
+ {
+  "id": "b6b94d9b",
+  "label": "backend",
+  "text": "Bind the eval credential-test bypass to the thread allowlist (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3a1e96dc",
+  "label": "backend",
+  "text": "Improve Test-worklows messages . * Update test-worklows action * Improve error messages * Fix output data to slack * Fix slackmessage * add github flag * add slack config * Add result to github output * Fix output string * Remove old comment for oauth2 * Remove console.logs * Improve message * Update to different slack action * update payload * Fix wrong json * debugging * Revert \"update payload\" This reverts commit 4ea955c85e7169e47e62ad6099c4265cda5b5381. * Reverted to old slack action * Update slack config * Remove fallback value * Change config name * tests * more tests * tests * Use single message * message fixes * Final fixes * Correct channel * delete <file> config * keep unused Export credentials step for later ---------"
+ },
+ {
+  "id": "679a5ad9",
+  "label": "frontend",
+  "text": "Add native PostHog exposure tracking to the PostHog store (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "2d6e406e",
+  "label": "frontend",
+  "text": "Vertically center workflow preview loading state . ## Summary Title self explanatory before: <img width=\"1198\" alt=\"image\" src=\"<url> now: <img width=\"1211\" alt=\"image\" src=\"<url> ## Related tickets and issues [ado-1645-fix-center-loading-preview-loading-state ](<url> ## Review / Merge checklist - [ x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url>"
+ },
+ {
+  "id": "cf0a4911",
+  "label": "backend",
+  "text": "Extract the repeated detection-report construction in the breaking-changes rules . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "1d46983b",
+  "label": "backend",
+  "text": "Unify `severity` and `level` for all application errors for Sentry (no-changelog) . ## Summary Unify `severity` and `level` for all <term> application errors for Sentry Follow-up to: <url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "c6dd9358",
+  "label": "backend",
+  "text": "Move some `typeorm` operators to repositories (no-changelog) . Moving some persistence logic to repositories to reduce circular dependencies."
+ },
+ {
+  "id": "86e7ec79",
+  "label": "frontend",
+  "text": "Fix completions for `.json` on quoted node name in Code node . To reproduce, request completion with `$input.first().json.` from a node with a quote in the name, e.g. `When clicking \"Execute Workflow\"`. Context: <url>"
+ },
+ {
+  "id": "151e60f8",
+  "label": "frontend",
+  "text": "Fix local storage flags defaulting to undefined string . useStorage takes the default value `undefined` and sets it in local storage.. also returns \"undefined\" as string which breaks onboarding flows Github issue / Community forum post (link here to close automatically):"
+ },
+ {
+  "id": "423b1146",
+  "label": "frontend",
+  "text": "Replace N8nCheckbox and ElCheckbox with N8nCheckbox2 (and rename) for consistency and improved functionality across components . Co-authored-by: Csaba Tuncsik <csaba.tuncsik@gmail.com>"
+ },
+ {
+  "id": "9604b87d",
+  "label": "backend",
+  "text": "Return scopes on invitation accept <term> (no-changelog) . ## Summary Return scopes on the invitation accept <term>. The <term> uses information until the user refreshes the pages so it's causing inconsistency for the new admin role. #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "a44197c1",
+  "label": "frontend",
+  "text": "Custom OAuth option not availble when there are managed credentials . Co-authored-by: Michael Kret <88898367+michael-radency@users.noreply.github.com>"
+ },
+ {
+  "id": "b66c3e2a",
+  "label": "backend",
+  "text": "Apply outbound request protection by default (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "97aa38e7",
+  "label": "backend",
+  "text": "Fix Postgres and MySQL tests (no-changelog) . This role query works for sqlite but [fails for Postgres and MySQL](<url> so generalize by adding alias and accounting for count possibly being `string` in the resulting rows. Run in progress: <url>"
+ },
+ {
+  "id": "5ffff1bb",
+  "label": "backend",
+  "text": "Stop binary data restoration from preventing execution from finishing . In the case of a filesystem failure to rename the binary files as part of the execution's cleanup process, the execution would fail to be saved and would never finish. This catch prevents it. ## Summary Whenever an execution is wrapping u to save the data, if it uses binary data n8n will try to find possibly misallocated files and place them in the right folder. If this process fails, the execution fails to finish. Given the execution has already finished at this point, and we cannot handle the binary data errors more gracefully, all we can do at this point is log the message as it's a filesystem issue. The rest of the execution saving process should remain as normal. ## Related tickets and issues <url> ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is"
+ },
+ {
+  "id": "bc473655",
+  "label": "frontend",
+  "text": "Fix canvas selection breaking after interacting with node actions . Sometimes canvas selection stops working after users interact with node action buttons (for example if node is moved by dragging one of the buttons) NOTE: Ticket number in the branch name is wrong, this fixes ADO-1226"
+ },
+ {
+  "id": "2580286a",
+  "label": "frontend",
+  "text": "Show retry information in execution list only when it exists . * fix(editor): Show retry information in execution list only when it exists * build: Fix checking for test files"
+ },
+ {
+  "id": "87996a1f",
+  "label": "backend",
+  "text": "Stop reporting non-error to sentry (issue 4229454473) (no-changelog) . This PR aims to stop reporting issues such as [this one](<url> Github issue / Community forum post (link here to close automatically):"
+ },
+ {
+  "id": "aa273745",
+  "label": "backend",
+  "text": "Run evaluations successfully when offload manual executions is true with queue mode . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "76aca62d",
+  "label": "frontend",
+  "text": "Switch cloud plan retrieval <term> (no-changelog) . * refactor: Switch cloud plan retrieval <term> * refactor: Remove user ID from request * refactor: Update <term> * refactor: Update to /<path> * refactor: Remove redundant `/rest` segment"
+ },
+ {
+  "id": "1dd3aed1",
+  "label": "backend",
+  "text": "Consolidate review decision authorization into one policy (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "ccb2b076",
+  "label": "backend",
+  "text": "Resolve expressions in credentials following paired item . ## Summary expressions that got used in credentials ## Related tickets and issues [PAY-1207](<url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. > A feature is not complete without tests. ---------"
+ },
+ {
+  "id": "2f665683",
+  "label": "frontend",
+  "text": "Improve CI performance (no-changelog) . 1. Split <term> and <term> tests to avoid them running in parallel 2. Enable coverage only on `master`"
+ },
+ {
+  "id": "46dd4d31",
+  "label": "backend",
+  "text": "Fix hard deletes stopping if <term> query throws . I have observed that the next hard deletion timeout is not scheduled if the `hardDeleteOnPruningCycle` function throws when fetching the data from the <term>. That is because the thrown error is not caught and the `scheduleHardDeletion` method is not called. This PR moves the call to `scheduleHardDeletion` into the `scheduleHardDeletion` for better cohesion, and ensures that it is called even if `hardDeleteOnPruningCycle` throws."
+ },
+ {
+  "id": "4bd7ae29",
+  "label": "frontend",
+  "text": "Improve performance when opening large workflows with node issues . This PR should improve performance when opening large workflows that contain node issues (Fixes ADO-1521) **Background** Main reason for this poor performance is that our `getCurrentWorkflow()` store getter is unnecessarily heavy but on top of that we are calling it more than we need. This addresses the second part of the issue by changing the following: - Pausing node issue processing while workflows are loading - Only getting current workflow once (instead for every node) when calling `refreshNodeIssues` **Benchmark** This was tested on a workflow attached to [this Linear ticket](<url> and this fix brings down opening time from **~1m10s** to **~28s** on my laptop. **Tests** - [Latest e2e tests run](<url> <url>"
+ },
+ {
+  "id": "11440bfd",
+  "label": "backend",
+  "text": "Move tag collection into repository (no-changelog) . * refactor(core): Move tag collection into repository * Fix tests * Address feedback * Fix missing spot"
+ },
+ {
+  "id": "6b678b5b",
+  "label": "frontend",
+  "text": "Use hasOwnProperty to check for canvas key on connector (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "6422078a",
+  "label": "frontend",
+  "text": "Revert Fix telemetry initialization (no-changelog) . Reverts commit b312f2ee548102399c8dd194024e31cba5e2df97 and 808a92809e4d389d902249646d5dc146de1d4e98"
+ },
+ {
+  "id": "33e7ff88",
+  "label": "frontend",
+  "text": "Revert 30k stars banner (no-changelog) . refactor: Revert 30k stars banner (#6204) This reverts commit e3f47994b17d510b329db83dca412a18b6b47e3d."
+ },
+ {
+  "id": "c9f3acc8",
+  "label": "frontend",
+  "text": "Prevent text edit dialog from re-opening in same tick . * fix: prevent reopenning textedit dialog in same tick * fix: add same logic for code edit dialog * fix: remove stop modifier * fix: blur input field when closing modal, removing default element-plus behaviour"
+ },
+ {
+  "id": "8e6b951a",
+  "label": "backend",
+  "text": "Do not display error when stopping jobless execution in queue mode . No need to surface error to user when stopping a job no longer in queue. <url>"
+ },
+ {
+  "id": "217de216",
+  "label": "frontend",
+  "text": "Tweak hover area of workflow / cred cards . Context When a user is attempting to interact with a foreground action inside an entity card (workflow, credential, community node, logging destination), they might accidentally open that entity instead of interacting with a foreground action. For these card components, actions are always placed on right side. <path> Area around right \"column\" of entity cards (workflow, cred, community node, logging destination) should not be a hoverable area (that opens that entity when clicked). This area is roughly highlighted in screen shot below in orange. ![image](<url>"
+ },
+ {
+  "id": "742c8a85",
+  "label": "backend",
+  "text": "Ensure execution deletion in worker lifecycle hook . Reported by customer [here](<url> apparently a very old long-standing bug for queue mode. Please review"
+ },
+ {
+  "id": "76c04815",
+  "label": "backend",
+  "text": "Reduce logging overhead for levels that do not output . all current logging calls execute `callsites()` to figure out what code tried to log. This happens even for logging methods that aren't supposed to create any output. Under moderate load, this can take up quite a lot of resources. This PR changes the logger to make all ignorable logging methods a No-Op. In a small benchmark with a simple webhook, with log-level set to `warn`, and using `ab -c 50 -n 500 <url> these were the response times: ### Before ![Before](<url> ### After ![After](<url>"
+ },
+ {
+  "id": "67a88914",
+  "label": "frontend",
+  "text": "Add routing middleware, permission checks, RBAC store, RBAC <term> . Github issue / Community forum post (link here to close automatically): ---------"
+ },
+ {
+  "id": "e5c2aea6",
+  "label": "frontend",
+  "text": "Use resource locator at Simple Vector Store memory key, allow cross workflow use . Remove workflow isolation from in-memory Simple Vector Store, making it possible to use vector stores created on other workflows. Display all current in-memory vector stores with a resource locator at Memory Key picker. Note that these vector stores are still intended for non-production development use. Any users of an instance can access data in all in-memory vector stores as they aren't bound to workflows."
+ },
+ {
+  "id": "aad57e2d",
+  "label": "frontend",
+  "text": "Update wording when an instance owner or admin is viewing a credential they do not own (no-changelog) . ## Summary Now that instance admins and owners can share on credentials, we need to tweak the wording so it's clear what they can do in the <term> and the access they have. ### Acceptance Criteria When an instance <path> views a credential they do not own, we should show the following text `You can view this credential because you have permission to read and share (and rename or delete it too).` When an instance <path> views a credential they do not own and has NOT been shared with them, we should show the following text `You can view this credential because you have permission to read and share (and rename or delete it too). You can share it with yourself or other users to use it in a workflow.`"
+ },
+ {
+  "id": "da330f06",
+  "label": "frontend",
+  "text": "Fix resource mapper dropdown width and disabled styling . * fix(editor): Fix resource mapper dropdown width and disabled styling * \ud83d\udc84 Tweaking the color for disabled dropdowns"
+ },
+ {
+  "id": "8df49e13",
+  "label": "frontend",
+  "text": "Make keyboard shortcuts more strict; don't accept extra <path> keys . ## Summary Keyboard shortcuts such as Shift+S get triggered even when other keys (<path>) are pressed, creating conflicts with browser or OS shortcuts. This PR makes keyboard shortcuts more strict: the exact combination needs to be pressed, no extra keys allowed. --> Ctrl+Shift+S will no longer trigger the Shift+S shortcut to add a sticky note ## Related tickets and issues <url>"
+ },
+ {
+  "id": "7b49cf2a",
+  "label": "backend",
+  "text": "Add commands to workers to respond with current state . This PR adds new endpoints to the REST API: `/<path>` and `/<path>` Currently these just trigger the return of status / ids from the workers via the redis back channel, this still needs to be handled and passed through to the <term>. It also adds the eventbus to each worker, and triggers a reload of those eventbus instances when the configuration changes on the main instances."
+ },
+ {
+  "id": "53c0b49d",
+  "label": "backend",
+  "text": "Initialize queue once in queue mode . We're initializing the queue twice because of a [bad merge](<url> No associated known bugs but no need to init the queue twice. We should follow up by investigating if any pending bugs can be associated to this."
+ },
+ {
+  "id": "0a48e727",
+  "label": "backend",
+  "text": "Seal the source-control import path with a clearance token (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "dcc9cc13",
+  "label": "backend",
+  "text": "Remove `storeMetadata` and `getSize` from binary data manager interface (no-changelog) . Depends on: #7164 | Story: [PAY-838](<url> This PR removes `storeMetadata` and `getSize` from the binary data manager interface, as these are specific to filesystem mode. Also this disambiguates identifiers: ``` binaryDataId filesystem:289b4aac51e-dac6-4167-b793-6d5c415e2b47 {mode}:{fileId} fileId - FS 289b4aac51e-dac6-4167-b793-6d5c415e2b47 {executionId}{uuid} fileId - S3 /workflows/{workflowId}/executions/{executionId}/<path> ``` Note: The object store changes originally in this PR were extracted out into the final PR. ---------"
+ },
+ {
+  "id": "dd6a4c95",
+  "label": "frontend",
+  "text": "Migrate Design System and Editor <term> to <term> 3 . * feat: remove <term>-fragment (no-changelog) * feat: partial <term> <term> * feat: migrate info-accordion and info-tip components * feat: migrate several components to <term> 3 * feat: migrated several components * feat: migrate several components * feat: migrate several components * feat: migrate several components * feat: re-exported all design system components * fix: fix design for popper components * fix: editor kind of working, lots of issues to fix * fix: fix several <term> 3 <term> issues * fix: replace @change with @update:modelValue in several places * fix: fix translation linking * fix: fix inline-edit input * fix: fix ndv and dialog design * fix: update parameter input event bindings * fix: rename deprecated lifecycle methods * fix: fix json view mapping * build: update lock file * fix(editor): revisit last conflict with master and fix issues * fix(editor): revisit last conflict with master and fix issues * fix: fix expression editor bug causing code mirror to no longer be reactive * fix: fix resource locator bug * fi"
+ },
+ {
+  "id": "ade15ea4",
+  "label": "backend",
+  "text": "Rename the promotion connection path parameter from id to promotionConnectionId . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "0d3d33dd",
+  "label": "frontend",
+  "text": "Only show push to git menu item to owners . Removes the menu entry of \"Push to Git\" from the workflow menu for non-owners, since they would not be able to push in the first place."
+ },
+ {
+  "id": "8824beac",
+  "label": "frontend",
+  "text": "Hide 'Create Folder' button if not applicable . Hide the 'Create Folder' button when viewing the 'Shared With You' or 'Overview' page, as folder creation is not supported on these pages."
+ },
+ {
+  "id": "f2939568",
+  "label": "backend",
+  "text": "Optimize workflow activation errors . At <url> we introduced Redis hashes for workflow ownership and manual webhooks... - to remove clutter from multiple related keys at the top level, - to improve performance by preventing serializing-deserializing, and - to guarantee atomicity during concurrent updates in multi-main setup. Workflow activation errors can also benefit from this. Added test coverage as well. To test manually, create a workflow with a trigger with an invalid credential, edit the workflow's `active` column to `true`, and restart. The activation error should show as a red triangle on canvas and in the workflow list."
+ },
+ {
+  "id": "da105f46",
+  "label": "frontend",
+  "text": "Update version control docs links . * fix(editor): Update version control setup docs link * fix(editor): add setup version control docs link to other places * fix(editor): making docs link reactive"
+ },
+ {
+  "id": "77e10b05",
+  "label": "frontend",
+  "text": "Distinguish skills from tools in session timelines . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "1d870412",
+  "label": "backend",
+  "text": "Don't use DB transactions on ExecutionRepository.createNewExecution . Saving execution data is one of the slowest DB operations in the application, and is likely behind some of the sqlite transaction concurrency issues we've been seeing. This not only remove the 2 separate transactions for saving `ExecutionEntity` and `ExecutionData`, but also remove fields from `ExecutionData.workflowData` that don't need to be saved (like `tags`, `shared`, `statistics`, `triggerCount`, etc)."
+ },
+ {
+  "id": "60de1003",
+  "label": "backend",
+  "text": "Extract the duplicated `getErrorMessage` helper in the instance-ai module into `@<path>` . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "c114e7ea",
+  "label": "backend",
+  "text": "Add Slack signature extractor hook for dynamic credentials (no-changelog) . Co-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "52e9882a",
+  "label": "frontend",
+  "text": "Remove triggers and actions experiment (no-changelog) . * refactor: Remove triggers and actions experiment * fix: Use `value` for computed property * test: Fix e2e"
+ },
+ {
+  "id": "a5ac4259",
+  "label": "backend",
+  "text": "Acquire expression isolate when reconciling unregistered webhooks during publication (no-changelog) . Co-authored-by: linear-code[bot] <222613912+linear-code[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "cc29c4da",
+  "label": "backend",
+  "text": "Fix test workflows (no-changelog) . * ci: Fix test workflows (no-changelog) We removed `pdf-parse` in #6640, so we need to get these test PDF files from the `test-workflows` repo instead ([which has been updated to include these files](<url> * remove `\\n` from ids and skipList text files"
+ },
+ {
+  "id": "4ac4b850",
+  "label": "frontend",
+  "text": "Fix redo when adding node on connection . * fix(editor): Fix redo when adding node on connection * \u2705 Adding tests for pushed nodes * \u2714\ufe0f Updating drag command for dragging nodes on the canvas * \ud83d\udc4c Handling drag end with a command option"
+ },
+ {
+  "id": "6dcd5612",
+  "label": "frontend",
+  "text": "Re-parent <term> error subclasses to Error (no-changelog) . Co-authored-by: linear-code[bot] <222613912+linear-code[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "885dba6f",
+  "label": "frontend",
+  "text": "Migrate externalHooks mixin to composables (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. As part of NodeView refactor, this PR migrates all externalHooks calls to `useExternalHooks` composable. #### How to test the change: 1. Run using env `export N8N_DEPLOYMENT_TYPE=cloud` 2. Hooks should still run as expected ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy ear"
+ },
+ {
+  "id": "63a6e7e0",
+  "label": "frontend",
+  "text": "Update image sizes in template description not to be full width always . ## Summary Update image sizes in template description not to be full width always. ## Related tickets and issues <url> ## Review / Merge checklist - [X] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. > A feature is not complete without tests."
+ },
+ {
+  "id": "7ed466db",
+  "label": "frontend",
+  "text": "Make workflow history button available only for dev builds . Github issue / Community forum post (link here to close automatically): ---------"
+ },
+ {
+  "id": "afa683a0",
+  "label": "backend",
+  "text": "Have one orchestration service per instance type . webhook instances will not listen to either worker or event log messages on the Redis <path> channel"
+ },
+ {
+  "id": "56d39c47",
+  "label": "frontend",
+  "text": "Replace deprecated ApplicationError in task-runner, <term>, and @n8n/* packages (no-changelog) . Co-authored-by: linear-code[bot] <222613912+linear-code[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "c7b74c3c",
+  "label": "frontend",
+  "text": "Ensure default credential values are not detected as dirty state . * fix(editor): Ensure default credential values are not detected as dirty state * chore: Remove logging * refactor: Improve comment"
+ },
+ {
+  "id": "04cabafe",
+  "label": "frontend",
+  "text": "Add AppCues tracking for onboarding event . ## Summary We want to trigger a flow, every time the template onboarding event is triggered. AppCues no longer supports flows triggering through Segment, except directly. #### How to test the change: 1. Open on Cloud, where AppCues scripts are available 2. import workflow through /<path> 3. Ensure event is sent.. if flow is enabled, flow should show <img width=\"1702\" alt=\"Screenshot 2023-12-07 at 14 39 51\" src=\"<url> ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [X] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [x] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e t"
+ },
+ {
+  "id": "64ed8643",
+  "label": "backend",
+  "text": "Expose incoming request headers to MCP trigger tools . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "b00b9057",
+  "label": "frontend",
+  "text": "Fix Webhook URL expansion icon . Changes the rotation of the icon. New collapsed: ![Screenshot from 2023-12-13 12-06-12](<url> New expanded: ![Screenshot from 2023-12-13 12-06-22](<url>"
+ },
+ {
+  "id": "d255b094",
+  "label": "backend",
+  "text": "Fix `import:credential` on postgres (no-changelog) . Since we switched to string ids, we don't need to update the `_seq` values for postgres. We removed this bit for the `import:workflow` [here](<url> but missed updating this file."
+ },
+ {
+  "id": "ed09e9c6",
+  "label": "frontend",
+  "text": "Revert \"test(editor): Add canvas actions E2E tests\" . Revert \"test(editor): Add canvas actions E2E tests (#6723)\" This reverts commit 052d82b2208c1b2e6f62c6004822c6278c15278b."
+ },
+ {
+  "id": "711fa2b9",
+  "label": "frontend",
+  "text": "Fix operation change failing in certain conditions . ## Summary This PR handles the case when there are multiple parameters with the same name but different `options` and `displayOptions`. In this case, if one of such fields is set, changing the dependent parameter value so the other should be shown causes an error in case their options are not compatible (this [check](<url> #### Example: LDAP node has two `options` properties with the same name: 1. `attributes` with predefined options (`add`, `replace`, `delete`). Shown when **Update** operation is selected 2. `attributes` with a collection of `attribute` objects. Shows for the **Create** operation Setting one of these parameter values and switching operation so the other is shown breaks the app. This PR checks if there is a value saved for such parameter and removes it before calling `getNodeParameters` in `valueChanged` handler. ## Related tickets and issues ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conven"
+ },
+ {
+  "id": "e6358398",
+  "label": "frontend",
+  "text": "Add build version as banner to outputted js and <term> chat files (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "f61b776b",
+  "label": "frontend",
+  "text": "Fix hard-coded parameter names for code editors . * fix(editor): Fix hard-coded parameter names for code editors * \u26a1 Adding computed property for editor content * \ud83d\udc4c Refactoring based on the code review comments"
+ }
+]

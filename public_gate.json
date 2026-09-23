@@ -1,0 +1,902 @@
+[
+ {
+  "id": "6b06890f",
+  "label": "yes",
+  "text": "ci: Fix master build on Nodejs 20 (no-changelog) . [`shelljs` is broken on Nodejs 20.6](<url> Until that is resolved, we should fix the version to 20.5"
+ },
+ {
+  "id": "dff84563",
+  "label": "no",
+  "text": "`ApplicationError` so that we start normalizing all the errors we report to Sentry Follow-up to: <url> ### `core` package `ApplicationError` - `FileSystemError` (abstract) - `FileNotFoundError` - `DisallowedFilepathError` - `BinaryDataError` (abstract) - `InvalidModeError` - `InvalidManagerError` - `InvalidExecutionMetadataError` ### `workflow` package `ApplicationError` - `ExecutionBaseError` (abstract) - `WorkflowActivationError` - `WorkflowDeactivationError` - `WebhookTakenError` - `WorkflowOperationError` - `SubworkflowOperationError` - `CliWorkflowOperationError` - `ExpressionError` - `ExpressionExtensionError` - `NodeError` (abstract) - `NodeOperationError` - `NodeApiError` - `NodeSSLError` Up next: - Reorganize errors in `<term>` - Flatten the hierarchy in `workflow` (do we really need `ExecutionBaseError`?) - Remove `ExecutionError` type - Stop throwing plain `Error`s - Replace `severity` with `level` - Add node and credential types as `tags` - Add workflow IDs and execution IDs as `extras`"
+ },
+ {
+  "id": "6ae2f5ef",
+  "label": "no",
+  "text": "fix(core): Fix shutdown if terminating before hooks are initialized . If the app receives termination signal before hooks have been initialised, the would be objet is undefined error. This PR fixes that."
+ },
+ {
+  "id": "d6343539",
+  "label": "yes",
+  "text": "chore: Bump Electron 41.9.1 \u2192 41.10.3 (minor) to clear 2 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "4d11639c",
+  "label": "yes",
+  "text": "test(ai-builder): Add plan-rejection eval and harden multi-turn eval consistency (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "c761c4da",
+  "label": "yes",
+  "text": "feat(core): Add trigger reconciliation to recover missed activations (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "2f665683",
+  "label": "yes",
+  "text": "ci: Improve CI performance (no-changelog) . 1. Split <term> and <term> tests to avoid them running in parallel 2. Enable coverage only on `master`"
+ },
+ {
+  "id": "fef91c97",
+  "label": "no",
+  "text": "feat(ai-builder): Add --keep-workflows flag and fix eval execution errors (no-changelog) . Co-authored-by: Claude Opus 4.6 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1a661e6d",
+  "label": "no",
+  "text": "feat(core): Integrate object store as binary data manager . Depends on: #7225 | Story: [PAY-848](<url> This PR integrates the object store service as a new binary data manager for Enterprise."
+ },
+ {
+  "id": "cbaa0be4",
+  "label": "no",
+  "text": "fix: Use consistent personal space icon in the Instance AI artifacts . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "cbf24768",
+  "label": "no",
+  "text": "fix(core): Find correct start nodes when the first node after that has no run data has pinned data . Co-authored-by: \u0915\u093e\u0930\u0924\u094b\u092b\u094d\u092b\u0947\u0932\u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u2122 <netroy@users.noreply.github.com>"
+ },
+ {
+  "id": "437c95e8",
+  "label": "no",
+  "text": "fix(core): Permission check for subworkflow properly checking for workflow settings . The `sharing` related code is legacy that was not removed. Subworkflow execution should check workflow settings alone, and this is now Github issue / Community forum post (link here to close automatically): <url> ---------"
+ },
+ {
+  "id": "7c57332d",
+  "label": "no",
+  "text": "fix(editor): Add missing activeNode check for redrawing (no-changelog) . ## Summary Wasn't able to reproduce, but `activeNode` sporadically returns null in some scenarios. Added appropriate check. ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "4b014286",
+  "label": "no",
+  "text": "fix(core): Make senderId required for all command messages . all commands sent between main instance and workers need to contain a <term> id to prevent senders from reacting to their own messages, causing loops this PR makes sure all sent messages contain a sender id by default as part of constructing a sending redis client. ---------"
+ },
+ {
+  "id": "86b7234f",
+  "label": "yes",
+  "text": "fix(core): Persist agent subscription lists for threads to DB for multi-main configurations (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "beedfb60",
+  "label": "no",
+  "text": "feat(editor): SQL editor overhaul . * Draft setup * \u26a1 Implemented expression evaluation in Postgres node, minor SQL editor <term> improvements, minor refacring * \u26a1 Added initial version of expression preview for SQL editor * \u26a1 Linking npm package for codemirror sql grammar instead of a local file * \u26a1 Moving expression editor wrapper elements to the <term> * \u26a1 Using expression preview in SQL editor * Use SQL parser skipping whitespace * \u2728 Added support for custom skipped segments specification * \u2728 Fixing highlight problems with dots and expressions that resolve to zero * \ud83d\udc55 Fixing linting error * \u2728 Added current item support * \u26a1 Added expression support to more nodes with sql editor * \u2728 Added expression support for other nodes * \u2728 Implemented different SQL dialect support * \ud83d\udc1b Fixing hard-coded parameter names for editors * \u2728 Fixing preview for nested queries, updating query when input data changes, adding keyboard shortcut to toggle comments * \u2728 Adding a custom automcomplete notice for different editors * \u26a1 Updating SQL autocomplete notice * \u2705 Added unit tests for SQL editor * \u26a1 Using "
+ },
+ {
+  "id": "92339bb2",
+  "label": "no",
+  "text": "feat(core): Complete the review activity feed and add the decision note (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "c08c5cc3",
+  "label": "yes",
+  "text": "contain no variables in the message, to continue normalizing all the errors we report to Sentry Follow-up to: <url>"
+ },
+ {
+  "id": "80a20933",
+  "label": "no",
+  "text": "feat(core): Collect and aggregate metrics from the evaluation workflow execution (no-changelog) . Co-authored-by: Tomi Turtiainen <10324676+tomi@users.noreply.github.com>"
+ },
+ {
+  "id": "58e4e563",
+  "label": "yes",
+  "text": "build: Check test files . * build: Check test files * build: update test file checker glob pattern * build: ignore changed files in test folders * build: fix gh workflow * build: update gh events in workflow * build: fix gh workflow * build: fix gh workflow action script path * build: fix gh workflow script * build: fix gh workflow script * build: fix gh workflow script * build: fix gh workflow script * build: fix gh workflow script * build: update gh actions * build: update gh actions * build: test change file without test * Revert \"build: test change file without test\" This reverts commit 73f5c544c5f4218da48cea13bfb9008a9a51cbd9. * build: test change file that already has test * build: fix action script * Revert \"build: test change file that already has test\" This reverts commit 21be611abfdbce67fd7243a16d987bb21927de22. * build: update script * build: test checking with test file change * Revert \"build: test checking with test file change\" This reverts commit 995b64f6bab825fc16bed52c04baa7fcc15baa55. * build: change file with no testable content * build: use typescript to traverse "
+ },
+ {
+  "id": "008fd5a9",
+  "label": "no",
+  "text": "test: Add e2e tests for cred setup on workflow editor (no-changelog) . ## Summary Follow-up to <url> Adds e2e tests for the template credential setup in workflow editor ## Related tickets and issues <url>"
+ },
+ {
+  "id": "267fe49d",
+  "label": "yes",
+  "text": "fix: Fix 15 security issues in fast-xml-builder, basic-ftp, fast-uri and 5 more . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "78f00f2e",
+  "label": "yes",
+  "text": "ci: Change to get the ref once without need for additional checkout (no-changelog) . Co-authored-by: \u0915\u093e\u0930\u0924\u094b\u092b\u094d\u092b\u0947\u0932\u0938\u094d\u0915\u094d\u0930\u093f\u092a\u094d\u091f\u2122 <netroy@users.noreply.github.com>"
+ },
+ {
+  "id": "6a6f74f0",
+  "label": "no",
+  "text": "fix(core): Coerce dynamic property keys before runtime denylist check (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "364c250c",
+  "label": "no",
+  "text": "fix(core): Report only error class and stack for unhandled node errors . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "b895ba43",
+  "label": "yes",
+  "text": "also cleaned up some imports, and fixed the tests in <file> 20"
+ },
+ {
+  "id": "1632ad1d",
+  "label": "no",
+  "text": "fix: Cap changed-files list to avoid oversized CI process environment . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "314f8b36",
+  "label": "yes",
+  "text": "feat: Add git-derived risk signals for mutation-health (no-changelog) . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "46a222a1",
+  "label": "yes",
+  "text": "ci: Re-enable Instance AI evals on PRs with cost-bounded trigger (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1dd04158",
+  "label": "no",
+  "text": "fix: Fix security issue in langsmith via minor version upgrade from 0.5.19 to 0.6.0 . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "b701dcb8",
+  "label": "yes",
+  "text": "ci!: Drop support for <file> 16. Add initial support for <file> 20 . We need to drop node 16 support, [as support for it is ends much earlier now, due to support for openssl 1.1.1 ending](<url> `0.236.x` releases will continue to support <file> 16 for another two months, and `1.x.x` releases will only support <file> 18 for now."
+ },
+ {
+  "id": "d307cae2",
+  "label": "no",
+  "text": "fix(Microsoft Teams Node): Downgrade OAuth2 scope from Group.ReadWrite.All to Group.Read.All . Co-authored-by: Dimitri Lavren\u00fck <20122620+dlavrenuek@users.noreply.github.com>"
+ },
+ {
+  "id": "f9814b75",
+  "label": "no",
+  "text": "fix(core): Respond with an error when a webhook execution ends before the Respond to Webhook node runs . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "52e6546c",
+  "label": "yes",
+  "text": "chore: Add currents-record-key input and shard upload conditional to reusable E2E workflow . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "3adfdf8c",
+  "label": "yes",
+  "text": "chore: Bump mysql2 3.17.0 \u2192 3.23.1 (minor) to clear 4 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "e7b353ca",
+  "label": "yes",
+  "text": "ci: Shard weekly E2E coverage run across cached <term> image (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "edeeacfe",
+  "label": "yes",
+  "text": "chore: Use wrangler-action@v3 for Storybook Cloudflare deploy (PAY-4282) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "91333400",
+  "label": "no",
+  "text": "fix(editor): AI Agent shows logs from multiple runs in same view . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "c04a996f",
+  "label": "yes",
+  "text": "fix: Change the name for checking issue template content (no-changelog) . Github issue / Community forum post (link here to close automatically): <url>"
+ },
+ {
+  "id": "be220ab3",
+  "label": "yes",
+  "text": "ci: Split Instance AI evals to own workflow, fire on approval only (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "cadfa4c1",
+  "label": "no",
+  "text": "fix: Only use displayOptions for determining credential required fields for update if the property is defined . Co-authored-by: Guillaume Jacquart <jacquart.guillaume@gmail.com>"
+ },
+ {
+  "id": "aa1bf951",
+  "label": "no",
+  "text": ":rocket: Release 1.10.0 . # [1.10.0](<url> (2023-10-05) ### Bug Fixes * **Convert <path> binary data Node:** Rename 'Move Binary Data' to 'Convert <path> binary data' ([#7318](<url> ([5e6c1d4](<url> * **core:** Account for itemless case on restoring binary data ID ([#7305](<url> ([1691223](<url> * **core:** Fix pruning of non-finished executions ([#7333](<url> ([1b4848a](<url> * **editor:** Disable email confirmation banner for trialing users ([#7340](<url> ([6d3d178](<url> * **editor:** Display value of selected matching column in RMC ([#7298](<url> ([3aac22b](<url> * **editor:** Fix canvas <term> snapping when dragging connection ([#7346](<url> ([b59b908](<url> * **editor:** Fix disappearing NDV header in code nodes ([#7290](<url> ([7ebf8f3](<url> * **editor:** Fix RLC not loading when an expression can't resolve ([#7295](<url> ([ddc26c2](<url> * **editor:** Separate cloud <term> calls ([#7312](<url> ([04dfcd7](<url> * **Jira Software Node:** Get all users in <path> ([#7322](<url> ([3704760](<url> * **Notion Node:** Rename Notion API Key to Internal Integration Token ([#7176](<url>"
+ },
+ {
+  "id": "4abbc89d",
+  "label": "no",
+  "text": "fix: Treat blank optional enum form fields as unset in package import . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "823dee4e",
+  "label": "no",
+  "text": "feat(core): Seal the chat-hub workflow creates with a clearance token (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "09d4756e",
+  "label": "yes",
+  "text": "feat(core): Annotate LangSmith traces with user feedback from Instance AI (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3a1e96dc",
+  "label": "yes",
+  "text": "ci: Improve Test-worklows messages . * Update test-worklows action * Improve error messages * Fix output data to slack * Fix slackmessage * add github flag * add slack config * Add result to github output * Fix output string * Remove old comment for oauth2 * Remove console.logs * Improve message * Update to different slack action * update payload * Fix wrong json * debugging * Revert \"update payload\" This reverts commit 4ea955c85e7169e47e62ad6099c4265cda5b5381. * Reverted to old slack action * Update slack config * Remove fallback value * Change config name * tests * more tests * tests * Use single message * message fixes * Final fixes * Correct channel * delete <file> config * keep unused Export credentials step for later ---------"
+ },
+ {
+  "id": "7efef5bc",
+  "label": "yes",
+  "text": "chore: DEVP-932 \u00b7 c2: Move image SBOM attestation job to Blacksmith runner . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "38e6c874",
+  "label": "yes",
+  "text": "ci: Merge the base into the bundle branches instead of replaying them (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "e1aa6548",
+  "label": "yes",
+  "text": "ci: Revert \"Set up Turborepo cache for GitHub actions runner\" (no-changelog). Revert \"ci: Set up Turborepo cache for GitHub actions runner (no-changelog) (#6335)\" This reverts commit 9dfc11037bd4dd1bb699a37b737d589681f6e696."
+ },
+ {
+  "id": "77d6e3fc",
+  "label": "no",
+  "text": "[PAY-837](<url> This PR includes `workflowId` in binary data writes so that the S3 manager can support this filepath structure `/workflows/{workflowId}/executions/{executionId}/binaryData/{binaryFilename}` to easily delete binary data for workflows. Also all binary data service and manager methods that take `workflowId` and `executionId` are made consistent in arg order. Note: `workflowId` is included in filesystem mode for compatibility with the common interface, but `workflowId` will remain unused by filesystem mode until we decide to restructure how this mode stores data. ---------"
+ },
+ {
+  "id": "56da2e43",
+  "label": "no",
+  "text": "fix: Open executions with large number of execution items without crashing tab . Co-authored-by: Tomi Turtiainen <10324676+tomi@users.noreply.github.com>"
+ },
+ {
+  "id": "4ba6b99c",
+  "label": "yes",
+  "text": "ci: Scope nodes-base tests via turbo --affected and jest --changedSince . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "044c710a",
+  "label": "yes",
+  "text": "fix: Make MySQL <term> for nano id change compatible with version 5.7 . * fix: Make <term> for MySQL compatible with version 5.7 * fix: Correct syntax * fix: Syntax for primary key creation * fix: Remove unnecessary constraint statement * fix: Name columns for sqlite <term> to prevent issues * ci: Always run DB tests with table-prefix and alt-schema * add tablePrefix to migrations (mysql not fixed) * fix character_set on mysql migrations * fix mysql collation version difference * cater for mariadb collations ---------"
+ },
+ {
+  "id": "d18f183b",
+  "label": "no",
+  "text": "fix: Allow 5-field cron expressions with step values in polling nodes . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "1a564282",
+  "label": "no",
+  "text": "chore: Bump immutable 5.1.5 \u2192 5.1.8 (patch) to clear 2 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "67702c24",
+  "label": "no",
+  "text": "and contain no variables in the message, to continue normalizing all the errors we report to Sentry Follow-up to: <url>"
+ },
+ {
+  "id": "00a4b8b0",
+  "label": "no",
+  "text": "feat(core): Add support for building LLM applications . This extracts all core and editor changes from #7246 and #7137, so that we can get these changes merged first. ADO-1120 [DB Tests](<url> [E2E Tests](<url> [Workflow Tests](<url> ---------"
+ },
+ {
+  "id": "6eb583b2",
+  "label": "yes",
+  "text": "ci: Add source_file input to mutation-health workflow for on-demand . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "c3ba0123",
+  "label": "yes",
+  "text": "feat: Migrate integer primary keys to nanoids . * first commit for postgres <term> * (not working) * sqlite <term> * quicksave * fix tests * fix pg test * fix postgres * fix variables import * fix execution saving * add user settings fix * change <term> to single lines * patch preferences <term> * cleanup * improve variable import * cleanup unusued code * Update <path> * address review notes * fix var <path> * refactor: Separate execution data to its own table (#6323) * wip: Temporary <term> process * refactor: Create boilerplate repository methods for executions * fix: Lint issues * refactor: Added search <term> to repository * refactor: Make the execution list work again * wip: Updating how we create and update executions everywhere * fix: Lint issues and remove most of the direct access to execution model * refactor: Remove includeWorkflowData flag and fix more tests * fix: Lint issues * fix: Fixed ordering of executions for FE, removed transaction when saving execution and removed unnecessary update * refactor: Add comment about missing feature * refactor: Refactor counting execu"
+ },
+ {
+  "id": "83f8aa28",
+  "label": "yes",
+  "text": "chore: Bump undici 7.28.0 \u2192 7.29.0 (minor) to clear 10 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "70ebcd58",
+  "label": "no",
+  "text": "fix(core): Skip vite analysis of security-audit reporter dynamic import (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "d255b094",
+  "label": "no",
+  "text": "fix(core): Fix `import:credential` on postgres (no-changelog) . Since we switched to string ids, we don't need to update the `_seq` values for postgres. We removed this bit for the `import:workflow` [here](<url> but missed updating this file."
+ },
+ {
+  "id": "9c4e6711",
+  "label": "yes",
+  "text": "ci: Add opencontainer image spec labels to the release Dockerfile (no-changelog) . Co-authored-by: Nikolai T. Jensen <32718507+ch0wm3in@users.noreply.github.com>"
+ },
+ {
+  "id": "0b84e107",
+  "label": "yes",
+  "text": "fix: Fix 11 security issues in jsonpath, mailparser, mysql2 and 6 more . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "78243edd",
+  "label": "no",
+  "text": "on S3 we need to query for binary data items for each execution in order to delete them. To minimize requests to S3, allow the user to skip pruning requests when setting TTL at bucket level."
+ },
+ {
+  "id": "63bd9af1",
+  "label": "no",
+  "text": "feat(editor): Add new empty state with quick connect for node credentials . Co-authored-by: Dimitri Lavren\u00fck <20122620+dlavrenuek@users.noreply.github.com>"
+ },
+ {
+  "id": "0a745d16",
+  "label": "no",
+  "text": "fix(editor): Add missing workflow id from route (no-changelog) . ## Summary #### How to test the change: 1. Go to executions page for a workflow without executions 2. Wait for autoRefresh to start 3. Error appears in console due to missing `name` parameter ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [x] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "56d39c47",
+  "label": "no",
+  "text": ""
+ },
+ {
+  "id": "ebbdc1ab",
+  "label": "yes",
+  "text": "feat(core): Add Moonshot, MiniMax and Qwen Cloud as model providers in Agent Builder . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "6cd984fb",
+  "label": "yes",
+  "text": "chore: Disable CodSpeed job on pull requests, keep it on post-merge only . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "9d3f13e0",
+  "label": "yes",
+  "text": "chore: Bump catalog dep eslint-plugin-oxlint ^1.61.0 \u2192 1.79.0 (minor) . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "29735c7a",
+  "label": "yes",
+  "text": "chore: Standardize license metadata across all first-party packages and tighten SBOM pipeline (no-changelog) . Co-authored-by: Claude Sonnet 4.6 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "b5e628bf",
+  "label": "no",
+  "text": "chore: Route raw `/rest/*` calls in e2e specs through API service helpers (api-purity) . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "3ae801ec",
+  "label": "yes",
+  "text": "chore(ci): Fix silently broken container image pre-pull in DB tests and nightly coverage workflows . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "fbce8f52",
+  "label": "no",
+  "text": ":rocket: Release 1.15.1 . ## [1.15.1](<url> (2023-11-02) ### Bug Fixes * **core:** Ensure execution deletion in worker lifecycle hook ([#7481](<url> ([742c8a8](<url> * **core:** Fix data encryption on credentials import ([#7560](<url> ([b350568](<url> * **core:** Fix issue that prevents owner logging in when using ldap ([#7408](<url> ([479f902](<url> * **core:** Handle missing resultData in runData ([#7523](<url> ([1055bd3](<url> * **core:** Permission check for subworkflow properly checking for workflow settings ([#7576](<url> ([437c95e](<url> * **core:** Prevent executions from becoming forever running ([#7569](<url> ([9bdb85c](<url> * **core:** Upgrade crypto-js to address CVE-2023-46233 ([#7519](<url> ([65e5593](<url> * **editor:** Do not truncate form inputs ([#7528](<url> ([ae616f1](<url> * **editor:** Fix NDV close after using input select ([#7544](<url> ([3b5e181](<url> * **editor:** Fix NDV unexpected re-render ([#7532](<url> ([2853fcf](<url> * **editor:** Fix route <term> caching, incorrect use of array reduce method and enable WF history feature ([#7434](<url> ([12a89e6](<"
+ },
+ {
+  "id": "4103f786",
+  "label": "yes",
+  "text": "chore: Bump fast-uri 3.1.2 \u2192 3.1.4 (patch) to clear 2 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "f696bca6",
+  "label": "yes",
+  "text": "chore: E2E shard whose spec list is fully quarantined falls back to running the entire suite . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "a773c7b4",
+  "label": "yes",
+  "text": "ci: Enrich and gate release and image SBOMs on resolved SPDX licenses (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "c91840df",
+  "label": "yes",
+  "text": "chore: Per-PR performance comparison check is <path> \u2014 investigate, scope, or temporarily disable . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "5835e055",
+  "label": "no",
+  "text": "fix(editor): Show nice error when environment is not set up . Adds a nicer error message with a link for owners who press Push to Git without having a repository connected yet."
+ },
+ {
+  "id": "ac02d32a",
+  "label": "yes",
+  "text": "fix: Fix 13 critical issues in vm2, protobufjs, @<path> and 4 more . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "4934462b",
+  "label": "no",
+  "text": "fix(editor): More dark-mode fixes (no-changelog) . This fixes: 1. The `OR` divider background when SSO Login is enabled 2. Scanning of QR code in settings in dark mode"
+ },
+ {
+  "id": "cc0dec23",
+  "label": "no",
+  "text": "fix(core): Conform eval mock output to declared structured-output schema (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "e8dd6098",
+  "label": "no",
+  "text": "feat(core): Gate Instance AI config-based evals behind a PostHog feature flag (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "3a13139f",
+  "label": "yes",
+  "text": "feat(core): Change workflow deletions to soft deletes . Adds soft\u2011deletion support for workflows through a new boolean column `isArchived`. When a workflow is archived we now set `isArchived` flag to true and the workflows stays in the <term> and is omitted from the default workflow listing query. Archived workflows can be viewed in read-only mode, but they cannot be activated. Archived workflows are still available by ID and can be invoked as sub-executions, so existing Execute Workflow nodes continue to work. Execution engine doesn't care about isArchived flag. Users can restore workflows via Unarchive action at the <term>."
+ },
+ {
+  "id": "a0452f02",
+  "label": "yes",
+  "text": "ci: Add manual release workflow for standalone packages . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "d0da7cc3",
+  "label": "no",
+  "text": "chore: Benchmark load harness mis-accounts Playwright timeout across load stages (Kafka benchmarks always fail) . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "df113823",
+  "label": "no",
+  "text": "fix(editor): Use `color-mix()` for subtle button <path> states and update guideline (no-changelog) . Co-authored-by: Sebastien Powell <sebpowell@users.noreply.github.com>"
+ },
+ {
+  "id": "823b589e",
+  "label": "no",
+  "text": ":rocket: Release 1.20.0 . # [1.20.0](<url> (2023-12-06) ### Bug Fixes * **AWS DynamoDB Node:** Improve error message parsing ([#7793](<url> ([5ba5ed8](<url> * **core:** Allow grace period for binary data deletion after manual execution ([#7889](<url> ([61d8aeb](<url> * **core:** Consolidate ownership and sharing data on workflows and credentials ([#7920](<url> ([38b88b9](<url> * **core:** Fix hard deletes stopping if <term> query throws ([#7848](<url> ([46dd4d3](<url> * **core:** Make sure mfa secret and recovery codes are not returned on login ([#7936](<url> ([f5502cc](<url> * **editor:** Fix deletion of last execution at execution preview ([#7883](<url> ([ce2d388](<url> * **editor:** Replace isInstanceOwner checks with scopes where applicable ([#7858](<url> ([132d691](<url> * **Google Sheets Node:** Fix issue with paired items not being set correctly ([#7862](<url> ([5207a2f](<url> * **Notion Node:** Fix broken Notion node parameters ([#7864](<url> ([51d1f5b](<url> ### Features * **BambooHR Node:** Add support for Only Current on company reports ([#7878](<url> ([4175801](<url> * **"
+ },
+ {
+  "id": "3ba7deb3",
+  "label": "no",
+  "text": "fix: Ensure external hooks post workflow execute run in queue mode . ## Summary Since 1.8.x a refactor removed the call to `workflow.postExecute`'s External hook from the execution path. This PR adds it back to the correct place, where workers are supposed to call this, allowing us to avoid having to re-read the execution data in the caller just for the hooks. It is important to have the hooks running in the worker whenever possible to prevent having to read the full execution data in the caller. #### How to test the change: 1. Use the attached hooks file [external-hooks.txt](<url> setting it up via environment variable using `export EXTERNAL_HOOK_FILES=/<path>` 2. Set up queue mode loading this file in both main and workers 3. See that the message logs will not be displayed without this fix ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updat"
+ },
+ {
+  "id": "6d42fad3",
+  "label": "no",
+  "text": "be written for [this user](<url> but the cause was not a file failed to be written but a missing `fileId` in a binary data item in an execution. The error should no longer be thrown as of 1.12. See story for more info. This PR is for cleanup and to consolidate any file not found errors in the context of binary data, to track if this happens again."
+ },
+ {
+  "id": "18964aae",
+  "label": "yes",
+  "text": "ci: Fix E2E impact-map source paths and unblock the nightly refresh (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "0132514f",
+  "label": "yes",
+  "text": "fix(core): Use consistent timezone-aware timestamps in postgres . Fixes: * ENG-51 / N8N-2490 * PAY-397 * #2178 * #2810 * #3855 Supersedes #2813 [DB Tests](<url>"
+ },
+ {
+  "id": "53a7502d",
+  "label": "no",
+  "text": "feat(core): Add secrets provider reload and refactor . This PR adds a message for queue mode which triggers an external secrets provider reload inside the workers if the configuration has changed on the main instance. It also refactors some of the message handler code to remove cyclic dependencies, as well as remove unnecessary duplicate redis clients inside services (thanks to no more cyclic deps)"
+ },
+ {
+  "id": "714981ee",
+  "label": "yes",
+  "text": "feat: Add multiple runs to instanceAI eval (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "711fa2b9",
+  "label": "no",
+  "text": "fix(editor): Fix operation change failing in certain conditions . ## Summary This PR handles the case when there are multiple parameters with the same name but different `options` and `displayOptions`. In this case, if one of such fields is set, changing the dependent parameter value so the other should be shown causes an error in case their options are not compatible (this [check](<url> #### Example: LDAP node has two `options` properties with the same name: 1. `attributes` with predefined options (`add`, `replace`, `delete`). Shown when **Update** operation is selected 2. `attributes` with a collection of `attribute` objects. Shows for the **Create** operation Setting one of these parameter values and switching operation so the other is shown breaks the app. This PR checks if there is a value saved for such parameter and removes it before calling `getNodeParameters` in `valueChanged` handler. ## Related tickets and issues ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwis"
+ },
+ {
+  "id": "c158ca24",
+  "label": "yes",
+  "text": "the axios upgrade, since localtunnel doesn't seem to be actively maintained."
+ },
+ {
+  "id": "f61b776b",
+  "label": "no",
+  "text": "fix(editor): Fix hard-coded parameter names for code editors . * fix(editor): Fix hard-coded parameter names for code editors * \u26a1 Adding computed property for editor content * \ud83d\udc4c Refactoring based on the code review comments"
+ },
+ {
+  "id": "0a28f536",
+  "label": "yes",
+  "text": "chore: Import `writeGithubOutput` from github-helpers.mjs in sync-master-to-3x.mjs . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "3e9a6336",
+  "label": "no",
+  "text": "chore: Use the shared `isRecord` helper in `<path>` instead of local copies . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "3ca66be3",
+  "label": "yes",
+  "text": "fix(editor): Show retry information in execution list only when it exists . * fix(editor): Show retry information in execution list only when it exists * build: Fix checking for test files"
+ },
+ {
+  "id": "c7fcbb7a",
+  "label": "yes",
+  "text": "fix: Fix 26 security issues in electron, axios, undici and 5 more . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "91182ed0",
+  "label": "no",
+  "text": "build: Add pnpm agent:setup for fresh-checkout install + build + test . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "5bf5f034",
+  "label": "no",
+  "text": "fix(core): Avoid Agent.close() deadlock in instance-ai web-research fetch (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "7a8742d7",
+  "label": "no",
+  "text": "chore: Route remaining genuine selector-purity chained locators in tests through page objects . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "64079ad9",
+  "label": "yes",
+  "text": "feat(core): Agents as first class entities support (no-changelog) . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "35449aaa",
+  "label": "yes",
+  "text": "fix: Fix 11 security issues in @<path>, defu, @<path> and 5 more . Co-authored-by: aikido-autofix[bot] <119856028+aikido-autofix[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "dbadc276",
+  "label": "no",
+  "text": "test(ai-builder): Pin eval experiments to the Staging LangSmith workspace (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "5477e3fb",
+  "label": "no",
+  "text": "function as discussed with Omar"
+ },
+ {
+  "id": "dcf12867",
+  "label": "no",
+  "text": "feat: AI nodes usability fixes + Summarization Chain V2 . Fixes: - Refactor connection snapping when dragging and enable it also for non-main connection types - Fix propagation of errors from sub-nodes - Fix chat scrolling when <path> messages - Prevent empty chat messages - Fix sub-node selected styles - Fix output names text overflow Usability improvements: - Auto-add manual chat trigger for agents & chain nodes - Various labels and description updates - Make the output parser input optional for Basic LLM Chain - Summarization Chain V2 with a simplified document loader & text chunking mode #### How to test the change: Example workflow showcasing different operation mode of the new summarization chain: [<file>](<url> ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers - <url> - <url> - <url> ## Review / Merge checklist - [x] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([convention"
+ },
+ {
+  "id": "f25e12de",
+  "label": "yes",
+  "text": "ci(ai-builder): Add iterations + experiment-name inputs to instance-ai eval dispatch (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "26afe956",
+  "label": "no",
+  "text": "fix(core): Prevent false agent model stream stalls and show run errors in chat history . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "79560920",
+  "label": "no",
+  "text": ""
+ },
+ {
+  "id": "e4ae11c2",
+  "label": "yes",
+  "text": "fix: Remove Tensorflow embeddings node (no-changelog) . ## Summary This PR removes `embeddingsTensorFlow` node and reverts our fix to accommodate the <term> build in #7893 . The node itself has been extracted as a [community node available from npm](<url> ---------"
+ },
+ {
+  "id": "cc37f21a",
+  "label": "no",
+  "text": "fix(editor): Remove root level tag selector from <term> module to avoid making it a global style . * fix(editor): Remove root level tag selector from <term> module to avoid making it a global style * trigger CI"
+ },
+ {
+  "id": "679a5ad9",
+  "label": "no",
+  "text": "feat(editor): Add native PostHog exposure tracking to the PostHog store (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "f8406c04",
+  "label": "yes",
+  "text": "ci: Fix typescript incremental builds (no-changelog) . `tsBuildInfoFile` is supposed to be relative to `tsconfig` like `outDir` is. Because of this, we are currently saving the TS incremental build cache for all packages in the same file. This is likely causing issues where the built <term> code sometimes does not accurately map to the current source code. This PR changes the incremental build setup to keep the cache in individual `dist` folders, like it used to be up until a 2 months ago, before <url>"
+ },
+ {
+  "id": "9d241a0d",
+  "label": "no",
+  "text": "feat(Google Calendar Trigger Node): Add support for cancelled events . Github issue / Community forum post (link here to close automatically): <url> This PR adds support for triggering workflows when Google Calendar events are cancelled."
+ },
+ {
+  "id": "7608eda6",
+  "label": "no",
+  "text": "chore: Route NDV-internal selector-purity violations in tests through . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "92d4befe",
+  "label": "yes",
+  "text": "fix(core): Fix AddMfaColumns <term> for sqlite (no-changelog) . When ever we have migrations that use `.addColumn` or `.dropColumn`, typeorm recreates tables for sqlite. so, we need to disable foreign key enforcement for sqlite, or else data in some tables can get deleted because of `ON DELETE CASCADE` [This has happened in the past](<url> and we should really come up with a way to prevent this from happening again. ---------"
+ },
+ {
+  "id": "25f3a3ef",
+  "label": "yes",
+  "text": "ci: Harden setup-nodejs against silent Node-version fall-through (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "0057bf38",
+  "label": "yes",
+  "text": "feat: Add support for publishing community nodes through GitHub Actions . Co-authored-by: aikido-pr-checks[bot] <169896070+aikido-pr-checks[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "9b4856e7",
+  "label": "no",
+  "text": "feat(core): Make postgres pool-size configurable (no-changelog) . When we upgrade typeorm in #5151, we switched from no pooling to a default pool-size of 10. This somehow significantly deteriorates the performance of queries when the application is under load."
+ },
+ {
+  "id": "8ace2a31",
+  "label": "no",
+  "text": "fix(core): Accept an object in the schema fields of the LangChain schema-driven nodes (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "64498cdc",
+  "label": "no",
+  "text": "fix(editor): Make AI assistant tool steps visible during streaming . - Steps visible during generation: When the AI assistant is working, users can now see each step (tool calls) as they happen in real-time, rather than having them hidden behind a collapsed section - Auto-collapse on completion: Once the assistant finishes responding (or the user stops it), the steps automatically collapse to keep the final view clean and focused on the result - Consistent loading state: The initial \"thinking\" state now uses the same visual <term> as the step list, providing a smoother transition as steps appear - Cleaner copy: Removed trailing ellipsis from status text (\"Thinking\" instead of \"Thinking...\", \"Processing\" instead of \"Processing...\") - Smoother transitions: Fixed a visual glitch where \"Workflow generated\" would briefly flash before the next step appeared"
+ },
+ {
+  "id": "d8a9f6ca",
+  "label": "yes",
+  "text": "chore: DEVP-932 \u00b7 c1: Move release compliance SBOM job to Blacksmith runner . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "cff28523",
+  "label": "no",
+  "text": "fix(core): Preserve submitted workflow outcome when builder errors after submit (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "000e76e3",
+  "label": "yes",
+  "text": "ci(core): Reduce memory usage in tests (part-2) (no-changelog) . This also gets rid of `Db.collection`, which was another source of circular dependencies."
+ },
+ {
+  "id": "aad57e2d",
+  "label": "no",
+  "text": "fix(editor): Update wording when an instance owner or admin is viewing a credential they do not own (no-changelog) . ## Summary Now that instance admins and owners can share on credentials, we need to tweak the wording so it's clear what they can do in the <term> and the access they have. ### Acceptance Criteria When an instance <path> views a credential they do not own, we should show the following text `You can view this credential because you have permission to read and share (and rename or delete it too).` When an instance <path> views a credential they do not own and has NOT been shared with them, we should show the following text `You can view this credential because you have permission to read and share (and rename or delete it too). You can share it with yourself or other users to use it in a workflow.`"
+ },
+ {
+  "id": "d0e44d45",
+  "label": "no",
+  "text": "feat(core): Add multi-main setup debug <term> (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. Adi's idea here to help diagnose: <url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "5d05f7f4",
+  "label": "no",
+  "text": "fix(Google Sheets Node): RMC should correctly map columns if data location set in options . Co-authored-by: Shireen Missi <94372015+ShireenMissi@users.noreply.github.com>"
+ },
+ {
+  "id": "97295f67",
+  "label": "no",
+  "text": "fix(editor): Remove explicit parameter name scanning for code editors . The correct value to display in an editor is already passed in to `ParameterInput`. We do not need to scan for the correct parameter name again. This also fixes the issue of us accidentally using `jsCode` as the parameter name in the Code node when the language is set to Python."
+ },
+ {
+  "id": "bed04ec1",
+  "label": "no",
+  "text": "fix(Postgres Node): Stop marking autogenerated columns as required . ## Summary Postgres columns can be - [generated as identity](<url> - [generated by a custom expression](<url> In these 2 cases, the column is not required when inserting a new row. This PR makes sure these types of column are not marked required in n8n. ### How to test 1. Create a Postgres table with all types of generated columns: for version >= 10 ```sql CREATE TABLE \"public\".\"test_table\" ( \"id\" int8 NOT NULL DEFAULT nextval('test_table_id_seq'::regclass), \"identity_id\" bigint GENERATED ALWAYS AS IDENTITY, \"id_plus\" numeric GENERATED ALWAYS AS (id + 5) STORED, \"title\" varchar NOT NULL, \"created_at\" timestamp DEFAULT now(), PRIMARY KEY (\"id\") ) ``` Before 10 you have to use serial or bigserial types: ```sql CREATE TABLE distributors ( did serial not null primary key, name varchar(40) NOT NULL CHECK (name <> '') ); ``` 2. Add a postgres node to canvas and try to insert data without the generated columns 3. Should successfully insert More info in <path> issue \u2b07\ufe0f ## Related tickets and issues - fixes #7084 - <url> - <"
+ },
+ {
+  "id": "3a33a448",
+  "label": "yes",
+  "text": "test(benchmark): Question-driven Playwright benchmark suite with tiered topology and rich diagnostics . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "f93270ab",
+  "label": "yes",
+  "text": "ci: Parallelize `ci-master` (no-changelog) . * ci: Parallelize `ci-master` (no-changelog) * ci: Move notify-on-failure to own job * ci: Fix syntax * ci: Dry run by adding branch * ci: Fix job reference * ci: Ensure full lint * ci: Restore `CI_LINT_MASTER` * ci: Remove env from top level * ci: Add matrix strategy * ci: Remove excess quotes * ci: Remove excess key * ci: Try with `run_install` * Revert \"ci: Try with `run_install`\" This reverts commit e5778c5735974e755fd94b9c5ae4b8a33dbc73b2. * ci: Add missing strategy * ci: Remove temp branch * test: Comment out test (from other PR)"
+ },
+ {
+  "id": "b5632545",
+  "label": "no",
+  "text": "fix(Postgres Node): RMC do not mark collumn as required if identity_generation is BY DEFAULT . Co-authored-by: Dana <152518854+dana-gill@users.noreply.github.com>"
+ },
+ {
+  "id": "3be2a043",
+  "label": "yes",
+  "text": "chore: Wire Currents record key in PR caller to activate shard upload skip . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "1575fce7",
+  "label": "yes",
+  "text": "fix(ai-builder): Bound eval lane requests and stop abandoned mocked executions (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "8cd4db0a",
+  "label": "no",
+  "text": "These two are only ever deleted via `POST /<path>`. No marker file, so untouched by pruning. - For an unsaved execution, we write to disk binary data, binary data metadata, and a marker file at `/meta`. We later delete all three during pruning. - The third flow is legacy. Currently, if the execution is unsaved, we actually store it in the DB while running the workflow and immediately after the workflow is finished during the `onWorkflowPostExecute()` hook we delete that execution, so the second flow applies. But formerly, we did not store unsaved executions in the DB (\"ephemeral executions\") and so we needed to write a marker file at `/persistMeta` so that, if the ephemeral execution crashed after the step where binary data was stored, we had a way to later delete its associated dangling binary data via a second pruning cycle, and if the ephemeral execution succeeded, then we immediately cleaned up the marker file at `/persistMeta` during the `onWorkflowPostExecute()` hook. This creation and cleanup at `/persistMeta` is still happening, but this third flow no longer has a purpose, as"
+ },
+ {
+  "id": "dc58340e",
+  "label": "no",
+  "text": "feat(editor): Change upgrade CTA on community editions (no-changelog) . * Change upgrade CTA on community editions * upgrade CTA event * Send source as ref in when redirecting * fix tests * import correcty telemetryfunction * aja * remove useUpgradeLink composable * remove composable from <file> * Add goToUpgrade to usage view"
+ },
+ {
+  "id": "5c69ba2c",
+  "label": "yes",
+  "text": "chore: Create table and typeorm entity for test definitions (no-changelog) . Co-authored-by: Tomi Turtiainen <10324676+tomi@users.noreply.github.com>"
+ },
+ {
+  "id": "e72521d5",
+  "label": "no",
+  "text": "fix(editor): Add Set up version control CTA . * fix(editor): Add Set up version control CTA * fix(editor): add unit test * fix(editor): extend unit test * fix(editor): update menu sidebar styles * fix(editor): update menu sidebar styles * fix(editor): fixes after conflict * fix(editor): hide branch color when not connected * fix(editor): fix connected collapsed paddings"
+ },
+ {
+  "id": "8a28e98e",
+  "label": "yes",
+  "text": "fix(core): Disallow orphan executions . Until <url> we had an edge case where a manual unsaved workflow when run creates an orphan execution, i.e. a saved execution not pointing to any workflow. This execution is only ever visible to the instance owner (even if triggered by a member), and is wrongly stored as unfinished and crashed. This PR enforces that the DB disallows any such executions from making it into the DB. This is needed also for the S3 client, which will include the `workflowId` in the path-like filename. ---------"
+ },
+ {
+  "id": "7236abaf",
+  "label": "yes",
+  "text": "ci: Delete the e2e image tarball from the cache after e2e passes (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "db81342b",
+  "label": "no",
+  "text": "docs: Add irreversible change warning for n8n@0.234.0 (no-changelog) . Add irreversible change warning for n8n@0.234.0 Add breaking change note for n8n@0.234.0 based on <url>"
+ },
+ {
+  "id": "3f06919c",
+  "label": "no",
+  "text": "feat(core): Add eval-data row services + eval-setup sub-agent prompt (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "4240e762",
+  "label": "yes",
+  "text": "feat(editor): Implement new banners framework . * \u26a1 Implemented new grid row - banners * \u2728 Fixing node creator and executions sidebar position after layout update * \ud83d\udc84 Added configurable round corners to the Callout <term> * \u26a1 Fixing mouse position detection and main tab bar position * \u26a1 Implemented basic banner <term> structure * \u26a1 Implemented banner state and dismiss logic * \u26a1 Fixing grid layout. Updating banners height state dynamically * \u26a1 Fix zoom to fit position, mouse position in demo mode and callout vertical alignment * \u26a1 Implementing proper trial banners logic * \ud83d\udc84 Only showing execution usage data once the sidebar is fully expanded * \u2728 Implemented <path> dismiss logic for v1 flag * \u26a1 Minor refactoring of banner logic * \u26a1 Updating permanent dismiss logic to work with all banners * \ud83d\udc55 Fixing linting errors * \u2714\ufe0f Updating Callout <term> test snapshots * \ud83d\udc84 Tweaking zoom to fit position * \u2714\ufe0f Updating testing endpoints to use new store data * \u2705 Added banners unit tests * \u2714\ufe0f Fixing failing banner tests * \u2705 Added more banner tests * \u26a1 Updating banners dimensions on resize, removing le"
+ },
+ {
+  "id": "9ac7c5b0",
+  "label": "no",
+  "text": "feat(core): Add telemetry for data redaction enforcement instance policy (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "b6de910c",
+  "label": "yes",
+  "text": "are always available directly where they are needed, instead of passing them around throughout the code."
+ },
+ {
+  "id": "038d2ca2",
+  "label": "no",
+  "text": "feat(core): Add durable scheduler rollout docs and observability warnings (no-changelog) . Co-authored-by: Emilia <100027345+sovietspaceship@users.noreply.github.com>"
+ },
+ {
+  "id": "b0991a07",
+  "label": "yes",
+  "text": "chore: Bump brace-expansion 5.0.6 \u2192 5.0.9 (patch) to clear 10 Aikido findings . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "250b7189",
+  "label": "no",
+  "text": "fix(ai-builder): Stop tombstoning example UUIDs in LangSmith dataset sync (no-changelog) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "89f44021",
+  "label": "yes",
+  "text": "fix(core): Use JWT as reset password token . * use jwt to reset password * increase expiration time to 1d * drop user id query string * refactor * use service instead of package in tests * sqlite <term> * postgres <term> * mysql <term> * remove unused properties * remove userId from FE * fix test for users.api * move <term> to the common folder * move type assertion to the jwt.service * Add jwt secret as a readonly property * use signData instead of sign in user.controller * remove base class * remove base class * add tests"
+ },
+ {
+  "id": "6b7455f8",
+  "label": "yes",
+  "text": "ci: Drop the abandoned-conflict-PR warning from the 3.x sync PR body (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "61129863",
+  "label": "yes",
+  "text": "docs: Replace `<url> to `<url> in `.md` files . ## Summary Commit generated with: ```bash grep -rl '<url> --include=*.md . | xargs sed -i '<path>:\\/\\/<path>:\\/\\/<path>' ``` ## Review / Merge checklist - [X] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included."
+ },
+ {
+  "id": "cc6cf06c",
+  "label": "yes",
+  "text": "ci: Gate the <term> smoke build on native pins instead of re-verifying pushed images (no-changelog) . Co-authored-by: Claude Opus 5 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "38579e53",
+  "label": "no",
+  "text": "last week](<url>"
+ },
+ {
+  "id": "60b5aa64",
+  "label": "yes",
+  "text": "test(benchmark): Add Playwright <term> scenario benchmark framework + customer-scale executions-list spec . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "ee7bbbdd",
+  "label": "yes",
+  "text": "Revert \"ci: Trigger <term> releases on tag creation instead of release publishing (no-changelog) \". This reverts commit 80c96a3dccdcbf186d2a2e16a56155f39d3988b8."
+ },
+ {
+  "id": "1747b6e7",
+  "label": "yes",
+  "text": "ci: Send doc URL check result to `#mission-docs` (no-changelog) . ## Summary Provide details about your pull request and what it adds, fixes, or changes. Photos and videos are recommended. <url> ... #### How to test the change: 1. ... ## Issues fixed Include links to Github issue or Community forum post or **Linear ticket**: > Important in order to close automatically and provide context to reviewers ... ## Review / Merge checklist - [ ] PR title and summary are descriptive. **Remember, the title automatically goes into the changelog. Use `(no-changelog)` otherwise.** ([conventions](<url> - [ ] [Docs updated](<url> or follow-up ticket created. - [ ] Tests included. > A bug is not considered fixed, unless a test is added to prevent it from happening again. A feature is not complete without tests. > > *(internal)* You can use Slack commands to trigger [e2e tests](<url> or [deploy test instance](<url> or [deploy early access version on Cloud](<url>"
+ },
+ {
+  "id": "7dd722bf",
+  "label": "yes",
+  "text": "chore: Bump sanitize-html 2.17.5 \u2192 2.17.7 (patch) to clear 1 Aikido finding . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "79f23fb9",
+  "label": "no",
+  "text": "feat(Spreadsheet File Node): Improve CSV parsing . This adds support for 1. custom delimiters 2. reading offsets to avoid having to read a large CSV all at once 3. excluding byte-order-mark NODE-861 #7443"
+ },
+ {
+  "id": "a37b9a0c",
+  "label": "yes",
+  "text": "feat(core): Extend evaluations to support node groups (no-changelog) . Co-authored-by: Miguel \u00c1ngel Moreno <1411774+miguelsaddress@users.noreply.github.com>"
+ },
+ {
+  "id": "e8b51c8d",
+  "label": "yes",
+  "text": "ci: Update the release process for v1 release . * release 1.0.0-rc from release-v1 branch. * allow creating major releases * disable merging releases back into master"
+ },
+ {
+  "id": "b3a0a472",
+  "label": "no",
+  "text": "feat: Wire the Schedule Trigger node into the durable scheduler (no-changelog) . Co-authored-by: Emilia <100027345+sovietspaceship@users.noreply.github.com>"
+ },
+ {
+  "id": "19b7f1ff",
+  "label": "no",
+  "text": "feat(editor): Upgrade <term> tooling to address a few vulnerabilities . This addresses CVE-2023-49293, CVE-2023-48631, and CVE-2023-26364 ## Review / Merge checklist - [x] PR title and summary are descriptive."
+ },
+ {
+  "id": "f024d8be",
+  "label": "yes",
+  "text": "ci!: Update <term> images for v1 release . * ci: Remove debian and rhel7 images * include libc6-compat in all alpine images * run all n8n <term> containers as the user `node` instead of `root` * upgrade the default version of npm bundled in all containers * consolidate <term> entrypoints"
+ },
+ {
+  "id": "7bd7b994",
+  "label": "yes",
+  "text": "test(benchmark): Add dedicated webhook procs + sizing matrix aggregator (DEVP-200 + DEVP-185) . Co-authored-by: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "c3455a4a",
+  "label": "no",
+  "text": "feat(editor): Removing `ph-no-capture` class from some elements . * feat(editor): Remove `.ph-no-capture` class from some of the fields * \u2714\ufe0f Updating test snapshots * \u26a1 Redacting expressions preview in credentials form * \ud83d\udd27 Disable posthog input masking * \ud83d\udea8 Testing PostHog iFrame settings * Reverting iframe test * \u26a1 Hiding API key in PostHog recordings * \u2705 Added tests for redacted values * \u2714\ufe0f Updating checkbox snapshots after label <term> update * \u2714\ufe0f Updating test snapshots in <term> * \ud83d\udc55 Fix lint errors"
+ },
+ {
+  "id": "db094f2d",
+  "label": "no",
+  "text": "fix(core): Fix all dependency versions for <term> packages (no-changelog) . Once the packages are published to NPM, they don't have the `<file>` to fix dependency versions. Which means that any dependency with `^` gets auto-upgrade to the latest matching minor, which can cause issues like [this](<url>"
+ },
+ {
+  "id": "075fd02b",
+  "label": "yes",
+  "text": "* refactor: Remove envs from other stacks * refactor: Remove MariaDB example"
+ },
+ {
+  "id": "1d61db22",
+  "label": "no",
+  "text": "test(ai-builder): Rename response-matches eval check and fix multi-turn wiring (no-changelog) . Co-authored-by: Claude Opus 4.8 (1M context) <noreply@anthropic.com>"
+ },
+ {
+  "id": "1e52ffec",
+  "label": "yes",
+  "text": "chore: Disable n8n node API-coverage contract test until API team resync . Co-authored-by: n8n-cat-bot[bot] <n8n-cat-bot[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "97aa38e7",
+  "label": "yes",
+  "text": "ci: Fix Postgres and MySQL tests (no-changelog) . This role query works for sqlite but [fails for Postgres and MySQL](<url> so generalize by adding alias and accounting for count possibly being `string` in the resulting rows. Run in progress: <url>"
+ },
+ {
+  "id": "30484a06",
+  "label": "no",
+  "text": "fix(editor): Resolve <term> 3 related console-warnings . * fix(editor): Resolve <term> 3 related console-warnings * Use span as <term> wrapper instead of div * Wrap popover <term> in span ---------"
+ },
+ {
+  "id": "071e56f7",
+  "label": "yes",
+  "text": "feat(core): Only show V1 banner to users who migrated . * feat(editor): Only show V1 banner to users who migrated * Set the v1 banner dismissed flag in settings table create <term> ---------"
+ },
+ {
+  "id": "1fb51663",
+  "label": "yes",
+  "text": "ci: Fix wrong ref in PR workflows which broke external builds . Github issue / Community forum post (link here to close automatically): #7423 This PR updates reference passed to the `checkout` action by the `cy-pull-request.ym`. This should fix three existing issues: - Failing unit tests for external pull requests - Failing e2e tests for external PRs - Passing empty `ref` to `lint` job which makes linter run on a wrong branch"
+ },
+ {
+  "id": "34197694",
+  "label": "yes",
+  "text": "feat(ai-builder): Add webhook notifications with HMAC authentication for AI evaluation results . Co-authored-by: cubic-dev-ai[bot] <191113872+cubic-dev-ai[bot]@users.noreply.github.com>"
+ },
+ {
+  "id": "6f50a5a5",
+  "label": "yes",
+  "text": "test(Gitlab Node): Add comprehensive tests for the Gitlab Node (no-changelog) . Co-authored-by: Alexander Gekov <40495748+alexander-gekov@users.noreply.github.com>"
+ },
+ {
+  "id": "2328b658",
+  "label": "no",
+  "text": ""
+ }
+]
